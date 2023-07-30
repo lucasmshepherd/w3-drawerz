@@ -1,0 +1,60 @@
+import { Rayn } from '@/components/icons/rayn';
+
+export const walletCurrencies = [
+  {
+    icon: <Rayn />,
+    name: 'Circulating',
+    code: 'Unlocked',
+    volume: '70%',
+    color: '#d4a883',
+    isChangePositive: true,
+  },
+  {
+    icon: <Rayn />,
+    name: 'Staking',
+    code: 'Vesting',
+    volume: '15%',
+    color: '#d4d377',
+    isChangePositive: false,
+  },
+  {
+    icon: <Rayn />,
+    name: 'Prizes',
+    code: 'Vesting',
+    volume: '5%',
+    color: '#d4d377',
+    isChangePositive: true,
+  },
+  {
+    icon: <Rayn />,
+    name: 'Advisers',
+    code: 'Vesting',
+    volume: '2%',
+    color: '#aaa',
+    isChangePositive: false,
+  },
+  {
+    icon: <Rayn />,
+    name: 'Operations',
+    code: 'Vesting',
+    volume: '2%',
+    color: '#fff',
+    isChangePositive: false,
+  },
+  {
+    icon: <Rayn />,
+    name: 'Team',
+    code: 'Vesting',
+    volume: '2%',
+    color: '#fff',
+    isChangePositive: false,
+  },
+  {
+    icon: <Rayn />,
+    name: 'Burn',
+    code: 'Locked',
+    volume: '4%',
+    color: '#cd3a22',
+    isChangePositive: true,
+  },
+];

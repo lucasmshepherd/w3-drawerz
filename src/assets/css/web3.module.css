@@ -1,0 +1,43 @@
+.qtymint {
+  display: inline-block;
+  margin: 10px;
+}
+
+.qtymint input {
+  color: #000;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 11px;
+  font-weight: bold;
+  line-height: 1;
+  display: block;
+  min-height: 43px;
+  width: 100%;
+  max-width: 80px;
+}
+
+.webutton {
+  display: inline-block!important;
+  background: #220033!important;
+  color: #fff!important;
+  border-radius: 4px!important;
+  transition: background-color 0.3s, color 0.3s!important;
+}
+
+.webutton:hover,
+.webutton:active {
+  background: #fff!important;
+  color: #3c4ce5!important;
+}
+
+/* .connected {
+  background: #3C4CE5!important;
+  border-color: rgba(255,255,255,.12)!important;
+} */
+
+
+.bar {
+  display: none;
+  height: 32px;
+  background: #3c4ce5;
+}

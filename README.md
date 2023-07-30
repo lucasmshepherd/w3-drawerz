@@ -1,14 +1,7 @@
-<pre>
- _ __ _____      ____ _ _ __ __| |____  
-| '__/ _ \ \ /\ / / _` | '__/ _` |_  /  
-| | |  __/\ V  V / (_| | | | (_| |/ /   
-|_|  \___| \_/\_/ \__,_|_|  \__,_/___|  
- _ __   ___| |___      _____  _ __| | __
-| '_ \ / _ \ __\ \ /\ / / _ \| '__| |/ /
-| | | |  __/ |_ \ V  V / (_) | |  |   < 
-|_| |_|\___|\__| \_/\_/ \___/|_|  |_|\_\
+## Some of the Technologies we used
 
-Telegram: https://t.me/rewardznetwork
-Website: https://rewardz.network
-
-</pre>
+- [NextJs](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com/)[ ](https://tailwindcss.com/)[CSS](https://tailwindcss.com/)
+- [Jotai](https://jotai.org/)
+- [Recharts](https://recharts.org/)

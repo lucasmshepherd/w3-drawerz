@@ -1,0 +1,537 @@
+.splash-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  perspective: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0,0,0,.8);
+}
+
+
+
+
+
+
+body.welcome {
+  background: linear-gradient(135deg, black, #220033);
+}
+
+body.welcome .main-main {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.carousel {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.carousel-item {
+  --items: 8;
+  --width: clamp(100px, 30vw,  230px);
+  --height: clamp(300px, 40vw,  400px);
+  --x: calc(var(--active) * 800%);
+  --y: calc(var(--active) * 200%);
+  --rot: calc(var(--active) * 120deg);
+  --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
+  overflow: hidden;
+  position: absolute;
+  z-index: var(--zIndex);
+  width: var(--width);
+  height: var(--height);
+  margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  user-select: none;
+  transform-origin: 0% 100%;
+  box-shadow: 0 10px 50px 10px rgba(0, 0, 0, .5);
+  background: black;
+  pointer-events: all;
+  transform:  translate(var(--x), var(--y)) rotate(var(--rot)) ;
+  transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
+  cursor: pointer;
+
+  .carousel-box {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+    opacity: var(--opacity);
+    font-family: 'Orelo-sw-db', serif;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .5));
+    }
+  }
+
+  .title {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    bottom: 20px;
+    left: 20px;
+    transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+    font-size: clamp(20px, 3vw, 30px);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+    display: none;
+  }
+
+  .num {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    top: 10px;
+    left: 20px;
+    transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+    font-size: clamp(20px, 10vw, 80px);
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+}
+
+.layout {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 90px;
+    width: 10px;
+    height: 100%;
+    border: 1px solid #fff;
+    border-top: none;
+    border-bottom: none;
+    opacity: .15;
+  }
+
+  .box {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    color: #fff;
+    transform-origin: 0% 10%;
+    transform: rotate(-90deg);
+    font-size: 9px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    opacity: .4;
+  }
+}
+
+.logo {
+  position: absolute;
+  z-index: 2;
+  top: 28px;
+  right: 28px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  padding-bottom: .1em;
+}
+
+.cursor {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .2);
+  margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
+  transition: transform .85s cubic-bezier(0, 0.02, 0, 1);
+  display: none;
+  pointer-events: none;
+  
+  @media (pointer: fine) {
+    display: block;
+  }
+}
+
+.cursor2 {
+  --size: 2px;
+  transition-duration: .7s;
+}
+
+
+.intro {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 7s;
+  opacity: 1;
+  
+}
+.glitch {
+  position: relative;
+  //background-color: black;
+  overflow: hidden;
+  height: 100%;
+}
+
+.jm {
+  color:rgba(115, 21, 203, 1);
+  font-size: 40px;
+  line-height: 0;
+  text-align: center;
+  //text-transform: uppercase;
+  font-weight: 300;
+  //letter-spacing: -.03em;
+  left: 10%;
+  //right: 0;
+  //top: 70%;
+  bottom: 10%;
+  z-index: 4;
+  position: absolute;
+  animation-name: jm-glitch;
+  animation-duration: 7s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: jm-glitch;
+  -webkit-animation-duration: 7s;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0;
+  mix-blend-mode: color-dodge;
+}
+@keyframes jm-glitch {
+  0% {transform:rotateX(0deg);opacity:0;left:0;color:rgba(115, 21, 203, 1)}
+  1% {transform:rotateX(180deg);opacity:1;color:white}
+  2% {transform:rotateX(0deg);left:0;color:rgba(115, 21, 203, 1);opacity:0}
+  3% {opacity:1;left:-300px}
+  4% {opacity:0;left:0}
+  29% {opacity:0}
+  29.5% {opacity:1;color:rgba(115, 21, 203, 1)}
+  30% {color:rgba(115, 21, 203, 1);opacity:0}
+  50% {transform:rotateY(0deg);color:rgba(115, 21, 203, 1);opacity:0}
+  51% {opacity:1;color:red;transform:rotateY(180deg);}
+  52% {opacity:0;color:rgba(115, 21, 203, 1);transform: rotateY(0deg)}
+  53% {opacity:1;color:white}
+  54% {opacity:0}
+  55% {opacity:1;color:rgba(115, 21, 203, 1)}
+  100% {opacity:1}
+}
+@-webkit-keyframes jm-glitch {
+  0% {transform:rotateX(0deg);opacity:0;left:0;color:rgba(115, 21, 203, 1)}
+  1% {transform:rotateX(180deg);opacity:1;color:white}
+  2% {transform:rotateX(0deg);left:0;color:rgba(115, 21, 203, 1);opacity:0}
+  3% {opacity:1;left:-300px}
+  4% {opacity:0;left:0}
+  29% {opacity:0}
+  29.5% {opacity:1;color:rgba(115, 21, 203, 1)}
+  30% {color:rgba(115, 21, 203, 1);opacity:0}
+  50% {transform:rotateY(0deg);color:rgba(115, 21, 203, 1);opacity:0}
+  51% {opacity:1;color:red;transform:rotateY(180deg);}
+  52% {opacity:0;color:rgba(115, 21, 203, 1);transform: rotateY(0deg)}
+  53% {opacity:1;color:white}
+  54% {opacity:0}
+  55% {opacity:1;color:rgba(115, 21, 203, 1)}
+  100% {opacity:1}
+}
+
+.glitch_img {
+  background: url("https://rewardz.network/images/rayn-logo-02.svg") no-repeat;
+  background-size: 60vw auto;
+  background-position: center;
+  width: 60%;
+  position: absolute;
+  top: -75%;
+  bottom: 0;
+  left: -5%;
+  right: 0;
+  opacity: 1;
+  animation-name: glitch-img;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-name: glitch-img;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+  transform: rotate(-10deg);
+  mix-blend-mode: overlay;
+  z-index: 15;
+}
+@keyframes glitch-img {
+  0% {filter:blur(0px)}
+  1% {filter:blur(10px) contrast(2)}
+  3% {filter:blur(30px)}
+  5% {filter:blur(1px)}
+  50% {filter:blur(0px)}
+  51% {filter:blur(10px)}
+  52% {filter:blur(0px)}
+  100% {filter:blur(0px)}
+}
+@-webkit-keyframes glitch-img {
+  0% {filter:blur(0px)}
+  1% {filter:blur(10px) contrast(2)}
+  3% {filter:blur(30px)}
+  5% {filter:blur(1px)}
+  50% {filter:blur(0px)}
+  51% {filter:blur(10px)}
+  52% {filter:blur(0px)}
+  100% {filter:blur(0px)}
+}
+
+.glitch-1 {
+  background: url("https://rewardz.network/images/dropz-blue.svg") no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  margin-right: -25%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  animation-name: glitch-1;
+  animation-duration: 4s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-name: glitch-1;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+  mix-blend-mode: overlay;
+}
+@keyframes glitch-1 {
+  0% {left:0;opacity:0}
+  1% {left:100px;opacity:1}
+  2% {left:0;opacity:0}
+  50% {left:0;opacity:0}
+  51% {left:-100px;opacity:1}
+  52% {left:0;opacity:0}
+  98% {opacity:0;left:0}
+  99% {left:30px;opacity:1}
+  100% {opacity:0;left:0}
+}
+@-webkit-keyframes glitch-1 {
+  0% {left:0;opacity:0}
+  1% {left:100px;opacity:1}
+  2% {left:0;opacity:0}
+  50% {left:0;opacity:0}
+  51% {left:-100px;opacity:1}
+  52% {left:0;opacity:0}
+  98% {opacity:0;left:0}
+  99% {left:30px;opacity:1}
+  100% {opacity:0;left:0}
+}
+
+.glitch-2 {
+  background: url("../images/top1.jpg") no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+  mix-blend-mode: lighten;
+  animation-name: glitch-2;
+  animation-duration: 3s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-name: glitch-2;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+}
+@keyframes glitch-2 {
+  0% {opacity:0;left:0}
+  24% {opacity:0;left:0}
+  25% {opacity:0.35;left:-30px}
+  26% {opacity:0.35;left:30px}
+  27% {opacity:0;left:0}
+  70% {opacity:0;left:0}
+  71% {opacity:0.35;left:50px}
+  72% {opacity:0;left:0}
+  100% {opacity:0;left:0}
+}
+@-webkit-keyframes glitch-2 {
+  0% {opacity:0;left:0}
+  24% {opacity:0;left:0}
+  25% {opacity:0.35;left:-30px}
+  26% {opacity:0.35;left:30px}
+  27% {opacity:0;left:0}
+  70% {opacity:0;left:0}
+  71% {opacity:0.35;left:50px}
+  72% {opacity:0;left:0}
+  100% {opacity:0;left:0}
+}
+
+.glitch-3 {
+  background: url("../images/top3.jpg") no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 70%;
+  height: 120%;
+  position: absolute;
+  //top: 0;
+  bottom: 0;
+  //left: auto;
+  right: -20%;
+  z-index: 3;
+  opacity: 0;
+  mix-blend-mode: lighten;
+  animation-name: glitch-3;
+  animation-duration: 4s;
+  animation-delay: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-name: glitch-3;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-delay: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+}
+@keyframes glitch-3 {
+  0% {opacity:0}
+  2% {opacity:0;top:0}
+  3% {opacity:1;top:10vh}
+  4% {opacity:1;top:5vh}
+  5% {opacity:0;top:0}
+  60% {opacity:0;top:0}
+  61% {opacity:1;top:-39px}
+  62% {opacity:1;top:-60px}
+  63% {opacity:0;top:0}
+  100% {opacity:0}
+}
+@-webkit-keyframes glitch-3 {
+  0% {opacity:0}
+  2% {opacity:0;top:0}
+  3% {opacity:1;top:10vh}
+  4% {opacity:1;top:5vh}
+  5% {opacity:0;top:0}
+  60% {opacity:0;top:0}
+  61% {opacity:1;top:-39px}
+  62% {opacity:1;top:-60px}
+  63% {opacity:0;top:0}
+  100% {opacity:0}
+}
+
+.glitch:after {
+  content: "";
+  animation: grain 0.5s steps(10) infinite;
+  background-image: url("https://1987clothing.com/wp-content/uploads/2019/08/grain12.png");
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.23;
+  position: fixed;
+  top: -110%;
+  width: 200%;
+  z-index: 5;
+  mix-blend-mode: lighten;
+}
+@keyframes grain {
+  0%, 100% {transform:translate(0, 0)}
+  10% {transform:translate(-5%, -10%)}
+  20% {transform:translate(-15%, 5%)}
+  30% {transform:translate(7%, -25%)}
+  40% {transform:translate(-5%, 25%)}
+  50% {transform:translate(-15%, 10%)}
+  60% {transform:translate(15%, 0%)}
+  70% {transform:translate(0%, 15%)}
+  80% {transform:translate(3%, 35%)}
+  90% {transform:translate(-10%, 10%)}
+}
+@-webkit-keyframes grain {
+  0%, 100% {-webkit-transform:translate(0, 0)}
+  10% {-webkit-transform:translate(-5%, -10%)}
+  20% {-webkit-transform:translate(-15%, 5%)}
+  30% {-webkit-transform:translate(7%, -25%)}
+  40% {-webkit-transform:translate(-5%, 25%)}
+  50% {-webkit-transform:translate(-15%, 10%)}
+  60% {-webkit-transform:translate(15%, 0%)}
+  70% {-webkit-transform:translate(0%, 15%)}
+  80% {-webkit-transform:translate(3%, 35%)}
+  90% {-webkit-transform:translate(-10%, 10%)}
+}
+
+@media screen and (max-width:1280px) {
+  .jm {
+      font-size: 30px;
+      top: 70%;
+  }
+}
+@media screen and (max-width:991px) {
+  .jm {
+      font-size: 30px;
+  }
+}
+@media screen and (max-width:575px) {
+  //.glitch_img,
+  .glitch-1,
+  .glitch-2,
+  .glitch-3 {
+      transform: scale(2.2);
+  }
+  .jm {
+      font-size: 20px;
+      top: 75%;
+  }
+}
