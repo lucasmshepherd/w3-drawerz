@@ -127,7 +127,7 @@ export default function TokenPage() {
           target="_blank"
         >
           <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-white ring-1 ring-inset ring-indigo-500/20">
-            Etherscan.io <span className="svgicon"><ExternalLink/></span>
+            Etherscan.io ↗
           </span>
         </a>
       </div>
@@ -167,7 +167,7 @@ export default function TokenPage() {
           href="https://www.team.finance/view-coin/0x562D8e607bed7Fc183Ca84C0362c853680b99638?name=Rewardz%20Automated%20Yield%20Network&symbol=RAYN&chainid=0x1"
           target="_blank"
         >
-          Vesting + LP Lock <span className="svgicon"><ExternalLink/></span>
+          Vesting + LP Lock ↗
         </a>
       </div>
       {/* Buttons */}
@@ -195,13 +195,13 @@ export default function TokenPage() {
           
           className="primary-button text-md whitespace-nowrap px-12 py-3 text-center"
         >
-          Buy Tokens
+          Buy Tokens{/*  <span aria-hidden="true">↗</span> */}
         </Link>
         <Link
           href="/modern"
           className="text-md mx-2 font-semibold leading-6 text-white"
         >
-          Launch App <span aria-hidden="true">→</span>
+          Launch App
         </Link>
       </div>
     </div>

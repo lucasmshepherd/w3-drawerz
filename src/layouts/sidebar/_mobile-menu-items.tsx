@@ -24,7 +24,7 @@ export const mobileMenuItems = [
     link: '',
   },
   {
-    name: 'Telegram ',
+    name: 'Telegram ↗',
     icon: <ProfileIcon />,
     href: 'https://t.me/rewardz_network',
     link: 'external',

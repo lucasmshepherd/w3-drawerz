@@ -15,18 +15,18 @@ import Icon7 from '@/assets/images/icons/icons_easy-tx.svg';
 import Icon8 from '@/assets/images/icons/icons_gaming.svg';
 import Icon9 from '@/assets/images/icons/icons_gasless.svg';
 import Icon10 from '@/assets/images/icons/icons_mobile.svg';
-import Icon11 from '@/assets/images/icons/icons_nft.svg';
-import Icon12 from '@/assets/images/icons/icons_coins.svg';
+//import Icon11 from '@/assets/images/icons/icons_nft.svg';
+//import Icon12 from '@/assets/images/icons/icons_coins.svg';
 import Base from '@/assets/images/business/logos_base.svg';
 import Coinbase from '@/assets/images/business/logos_coinbase.svg';
 import Next from '@/assets/images/business/logos_next.svg';
 import Chainlink from '@/assets/images/business/logos_chainlink.svg';
 import CoinGecko from '@/assets/images/business/logos_coingecko.svg';
-import Vercel from '@/assets/images/business/logos_vercel.svg';
+//import Vercel from '@/assets/images/business/logos_vercel.svg';
 import Thirdweb from '@/assets/images/business/logos_thirdweb.svg';
 import OpenAi from '@/assets/images/business/logos_openai.svg';
 import Zealy from '@/assets/images/business/logos_zealy.svg';
-import { ExternalLink } from '@/components/icons/external-link';
+//import { ExternalLink } from '@/components/icons/external-link';
 import BaseIcon from '@/assets/images/base-logo-in-blue.svg';
 import CbIcon from '@/assets/images/cb-wallet.svg';
 import ClIcon from '@/assets/images/chainlink.svg';
@@ -244,7 +244,7 @@ export default function Home() {
                 target="_blank"
                 className="text-md mx-2 font-semibold leading-6 text-white"
               >
-                Buy Tokens <span className="svgicon" aria-hidden="true"><ExternalLink/></span>
+                Buy Tokens ↗
               </a>
             </div>
             <div className="mt-12 flex inline-flex flex-row">
@@ -569,7 +569,7 @@ export default function Home() {
                         target="_blank"
                         className="text-md font-semibold leading-6 text-color1"
                       >
-                        {feature.link} <span className="svgicon" aria-hidden="true"><ExternalLink/></span>
+                        {feature.link} ↗
                       </a>
                     </p>
                   </dd>
