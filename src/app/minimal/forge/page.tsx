@@ -207,7 +207,7 @@ export default function NFT() {
 
 
 
-<div className="carousel -mx-8 px-16 bg-color5 relative">
+<div className="carousel -mx-8 px-16 bg-color5 relative"> 
   <span className="absolute top-6 right-6 px-3 py-2">DEMO</span>
 	<div className="carousel-item">
 		<div className="carousel-box">
