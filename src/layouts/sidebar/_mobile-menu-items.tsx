@@ -24,6 +24,12 @@ export const mobileMenuItems = [
     link: '',
   },
   {
+    name: 'Games',
+    icon: <FarmIcon />,
+    href: '/minimal/games',
+    link: '',
+  },
+  {
     name: 'Telegram ↗',
     icon: <ProfileIcon />,
     href: 'https://t.me/rewardz_network',

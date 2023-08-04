@@ -27,6 +27,11 @@ import CbIcon from '@/assets/images/cb-wallet.svg';
 import Lab from '@/assets/images/scientist.jpg';
 import OpenAiIcon from '@/assets/images/openai-white.svg';
 import LogoIcon from '@/assets/images/logo-sm.png';
+import Game1 from '@/assets/images/games1.jpg';
+import Game2 from '@/assets/images/games2.jpg';
+import Game3 from '@/assets/images/games3.jpg';
+import Game4 from '@/assets/images/games4.jpg';
+import Game5 from '@/assets/images/games5.jpg';
 import '@/assets/css/home.scss';
 // gsap
 import { gsap } from "gsap";
@@ -55,6 +60,16 @@ export default function NFT() {
     ScrollTrigger.create({
       trigger: ".featurelist",
       start: "top 65%",
+      toggleClass: "active",
+    });
+    ScrollTrigger.create({
+      trigger: "#cardrow",
+      start: "top 60%",
+      toggleClass: "active",
+    });
+    ScrollTrigger.create({
+      trigger: "#cardroww",
+      start: "top 60%",
       toggleClass: "active",
     });
   }, []);
@@ -121,7 +136,7 @@ export default function NFT() {
 
 
 
-<div className="banner-main flow-row relative isolate flex items-center pb-24 -mx-4 lg:pt-[96px] lg:-mt-[96px] md:-mx-6 md:px-12 lg:-mx-8 lg:px-16">
+<div className="banner-main flow-row relative isolate flex items-center py-24 pt-12 -mx-4 lg:pt-[96px] lg:-mt-[96px] md:-mx-6 md:px-12 lg:-mx-8 lg:px-16">
         <div className="mx-auto max-w-7xl w-full px-6 column flex-col lg:flex-row flex items-center lg:px-8">
           <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl grow relative z-20">
 
@@ -193,56 +208,6 @@ export default function NFT() {
 
 
 
-
-
-
-    <div className="scientist -mr-8 mt-16 overflow-hidden pr-8 sm:py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left flex flex-col items-start justify-center">
-              <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
-              <span className="hype-2">AI</span> Trai<span className="hype-2">t</span>s 2.0
-              </h2>
-              <p className="mt-2 text-3xl md:text-4xl font-normal tracking-tight w-full">
-                Bring Your NFTs to Life
-              </p>
-              <p className="mt-6 mb-10 text-lg leading-8 text-gray-300">
-                We tapped into OpenAI API and decided to hook it up to NFT
-                traits and have some fun
-              </p>
-              <dl className="featurelist space-y-6 max-w-xl text-base leading-7 lg:max-w-none">
-                  {features2.map((feature) => (
-                    <>
-                      <div key={feature.name} className="relative flex flex-row">
-                        <div className="mr-3 flex h-10 w-10 basis-10 items-center justify-center rounded-md bg-color8">
-                          {/* <feature.icon className="h-6 w-6 text-white" aria-hidden="true" /> */}
-                          <Image
-                            alt="icon"
-                            src={feature.icon}
-                            width={48}
-                            height={48}
-                          />
-                        </div>
-                        <dt className="inline pt-[6px] text-lg font-medium">
-                          {feature.name}
-                        </dt>
-                      </div>
-{/*                       <p className="mb-6 p-3 mt-2 border border-indigo-900 rounded-lg text-base">
-                        <span className="block">{feature.description}</span>
-                      </p> */}
-                    </>
-                  ))}
-                </dl>
-            </div>
-            <div className="masker masker3 flex items-center justify-center lg:-mr-32 lg:ml-16">
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
 {/*     <div className="pt-24 sm:pt-32">
       <div className="mx-auto max-w-7xl w-full text-center">
         <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
@@ -269,7 +234,7 @@ export default function NFT() {
 
 
   {/* Hero */}
-  <div id="waterframe" className="nft-banner relative flex flex-row justify-start bg-black items-center -mx-8 px-16 py-24 mt-24">
+  <div id="waterframe" className="nft-banner relative flex flex-row justify-start bg-black items-center -mx-8 px-16 mb-24 py-24">
     <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
       {/* Announcement Banner */}
       <div className="text-center">
@@ -336,6 +301,125 @@ export default function NFT() {
   </div>
   {/* End Hero */}
 
+
+
+  <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full text-center">
+        Web3 Gamin<span className="hype-3">g</span>
+      </h2>
+      <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full text-center mb-10">
+        Gaming Development
+      </p>
+
+
+      <div id="cardroww" className="max-w-2xl mx-auto mb-12 rounded-lg w-full">
+        <div className="relative mx-auto">
+          <div className="relative ">
+            <Image
+              className="h-full w-full object-cover"
+              src={Game1.src}
+              alt=""
+              width={1600}
+              height={900}
+            />
+          </div>
+          <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
+            <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
+              <div className="">
+                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                  Growbotz <i className="text-xs text-white/50 inline font-normal">In Progress</i>
+                </h2>
+                <p className="text-sm leading-7 text-gray-300">
+                  Farming for the green thumbs
+                </p>
+              </div>
+              <div className="text-xs bg-white/20 text-center py-1 px-2 leading-1 rounded-full border border-white/30 flex flex-row items-center">
+                Development <span className="w-[6px] h-[6px] ml-1 bg-green-400 rounded-full block"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="cardrow" className="max-w-2xl mx-auto mb-12 rounded-lg w-full">
+        <div className="relative mx-auto">
+          <div className="relative ">
+            <Image
+              className="h-full w-full object-cover"
+              src={Game5.src}
+              alt=""
+              width={1600}
+              height={900}
+            />
+          </div>
+          <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
+            <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
+              <div className="">
+                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                  High Orbit <i className="text-xs text-white/50 inline font-normal">Seeking Investors</i>
+                </h2>
+                <p className="text-sm leading-7 text-gray-300">
+                  A worms-like artillery battler
+                </p>
+              </div>
+              <div className="text-xs bg-white/20 text-center py-1 px-2 leading-1 rounded-full border border-white/30 flex flex-row items-center">
+                Funding <span className="w-[6px] h-[6px] ml-1 bg-red-400 rounded-full block"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Link
+        href="/minimal/games"
+        className="primary-button button-outline text-md whitespace-nowrap px-12 py-3 text-center inline mx-auto"
+      >
+        View Games
+      </Link>
+
+
+
+  <div className="scientist -mr-8 mt-24 pr-8 pt-24 sm:py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div className="masker masker3 flex items-center justify-center lg:-ml-32 lg:mr-16">
+
+            </div>
+            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left flex flex-col items-start justify-center">
+              <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
+              <span className="hype-2">AI</span> Trai<span className="hype-2">t</span>s 2.0
+              </h2>
+              <p className="mt-2 text-3xl md:text-4xl font-normal tracking-tight w-full">
+                Bring Your NFTs to Life
+              </p>
+              <p className="mt-6 mb-10 text-lg leading-8 text-gray-300">
+                We tapped into OpenAI API and decided to hook it up to NFT
+                traits and have some fun
+              </p>
+              <dl className="featurelist space-y-6 max-w-xl text-base leading-7 lg:max-w-none">
+                {features2.map((feature) => (
+                  <>
+                    <div key={feature.name} className="relative flex flex-row">
+                      <div className="mr-3 flex h-10 w-10 basis-10 items-center justify-center rounded-md bg-color8">
+                        {/* <feature.icon className="h-6 w-6 text-white" aria-hidden="true" /> */}
+                        <Image
+                          alt="icon"
+                          src={feature.icon}
+                          width={48}
+                          height={48}
+                        />
+                      </div>
+                      <dt className="inline pt-[6px] text-lg font-medium">
+                        {feature.name}
+                      </dt>
+                    </div>
+                  </>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </>

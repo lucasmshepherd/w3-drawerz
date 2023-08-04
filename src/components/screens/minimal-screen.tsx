@@ -35,8 +35,11 @@ import PersonsA from '@/assets/images/samurai.gif';
 import Persons from '@/assets/images/samurai.png';
 import RobotBanner from '@/assets/images/basechest.gif';
 import Video from '@/components/video';
-import VideoMain from '@/assets/videos/forged_1.mp4';
-import Game from '@/assets/images/aliens.jpg';
+import Game1 from '@/assets/images/games1.jpg';
+import Game2 from '@/assets/images/games2.jpg';
+import Game3 from '@/assets/images/games3.jpg';
+import Game4 from '@/assets/images/games4.jpg';
+import Game5 from '@/assets/images/games5.jpg';
 import '@/assets/css/home.scss';
 
 //import BaseGlobe from '@/assets/images/content/base-logo-in-blue.webp';
@@ -60,7 +63,12 @@ export default function Home() {
     });
     ScrollTrigger.create({
       trigger: "#cardrow",
-      start: "top center",
+      start: "top 60%",
+      toggleClass: "active",
+    });
+    ScrollTrigger.create({
+      trigger: "#cardroww",
+      start: "top 60%",
       toggleClass: "active",
     });
     ScrollTrigger.create({
@@ -223,7 +231,7 @@ export default function Home() {
               Built Different
             </h1>
             <p className="mt-6 max-w-[25em] text-lg leading-8 text-gray-300">
-              Base is a security-first layer 2 for Ethereum with easy access to Coinbase web3 APIS
+              Base is a security-first layer 2 for Ethereum with easy access to Coinbase web3 APIs
             </p>
             
             <div className="mt-10 flex items-center gap-x-6">
@@ -234,13 +242,12 @@ export default function Home() {
               >
                 Buy RAYN
               </Link>
-              <Link
-                href="/minimal/token"
-                target="_blank"
-                className="text-md mx-2 text-color1 leading-6 font-semibold"
+              <a
+                href="#based"
+                className="text-md mx-2 text-color1 leading-6 "
               >
-                Learn More →
-              </Link>
+                Why Base?
+              </a>
             </div>
             <div className="mt-12 flex inline-flex flex-row">
               <Image
@@ -308,7 +315,7 @@ export default function Home() {
       </div>
 
 
-      <div id="grungerow" className="-mx-8 px-16 py-8 -mt-24 relative">
+      <div id="grungerow" className="-mx-8 px-16 py-8 -mt-24 mb-24 relative">
         <Video />
 
         <div className="relative pt-12 pb-6 relative z-10">
@@ -391,84 +398,6 @@ export default function Home() {
       </div>
       </div>
 
-      <div className="relative mb-24">
-        <div className="mx-auto max-w-7xl py-8 sm:px-6 sm:py-4 lg:px-8">
-          <div className="relative isolate px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left flex flex-col items-start justify-center">
-              <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
-                Trai<span className="hype-2">t</span>s 2.0
-              </h2>
-              <p className="mt-2 text-3xl md:text-4xl font-normal tracking-tight w-full">
-                Bring your NFTs to life with Artificial Intelligence
-              </p>
-              <p className="mt-6 mb-10 text-lg leading-8 text-gray-300">
-                We tapped into OpenAI API and decided to hook it up to NFT
-                traits and see what kind of crazy fun we can have
-              </p>
-              <Link
-                href="/minimal/token"
-                className="primary-button button-outline text-md whitespace-nowrap px-12 py-3 text-center"
-              >
-                Learn More
-              </Link>
-{/*               <ul
-                role="list"
-                className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2"
-              >
-                {benefits.map((benefit) => (
-                  <li key={benefit} className="flex gap-x-3 items-center">
-                    <svg
-                      className="checksvg fill-color1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="1em"
-                      viewBox="0 0 448 512"
-                    >
-                      <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                    </svg>
-                    {benefit}
-                  </li>
-                ))}
-              </ul> */}
-
-              {/*             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              <a
-                href="#"
-                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Get started
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-white">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div> */}
-            </div>
-            <div className="samuraiana relative py-16 w-full flex flex-col items-center justify-center -ml-16">
-               <Image
-                className="samtop max-w-100"
-                src={PersonsA.src}
-                alt="Samurai"
-                width={858}
-                height={865}
-              />
-               <Image
-                className="sammid max-w-100"
-                src={Persons.src}
-                alt="Samurai"
-                width={858}
-                height={865}
-              />
-               <Image
-                className="sambot max-w-100"
-                src={Persons.src}
-                alt="Samurai"
-                width={858}
-                height={865}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
 
       <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full text-center">
         Web3 Gamin<span className="hype-3">g</span>
@@ -476,39 +405,74 @@ export default function Home() {
       <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full text-center mb-10">
         Gaming Development
       </p>
-      <div id="cardrow">
-        <div className="relative bg-white/5 mx-auto mb-16 max-w-7xl rounded-md overflow-hidden">
-          <div className="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+
+
+      <div id="cardroww" className="max-w-2xl mx-auto mb-12 rounded-lg w-full">
+        <div className="relative mx-auto">
+          <div className="relative ">
             <Image
               className="h-full w-full object-cover"
-              src={Game.src}
+              src={Game1.src}
               alt=""
-              width={600}
-              height={400}
+              width={1600}
+              height={900}
             />
           </div>
-          <div className="relative mx-auto max-w-7xl py-24 sm:py-32 lg:px-8 lg:py-40">
-            <div className="pl-6 pr-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
-              <h2 className="text-base font-semibold leading-7 text-color1">Award winning support</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">We’re here to help</p>
-              <p className="mt-6 text-base leading-7 text-gray-300">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a
-                scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum
-                tincidunt duis.
-              </p>
-              <div className="mt-8">
-                <a
-                  href="#"
-                  className="inline-flex rounded-md bg-color8 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                >
-                  Visit the help center
-                </a>
+          <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
+            <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
+              <div className="">
+                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                  Growbotz <i className="text-xs text-white/50 inline font-normal">In Progress</i>
+                </h2>
+                <p className="text-sm leading-7 text-gray-300">
+                  Farming for the green thumbs
+                </p>
+              </div>
+              <div className="text-xs bg-white/20 text-center py-1 px-2 leading-1 rounded-full border border-white/30 flex flex-row items-center">
+                Development <span className="w-[6px] h-[6px] ml-1 bg-green-400 rounded-full block"></span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+
+      <div id="cardrow" className="max-w-2xl mx-auto mb-12 rounded-lg w-full">
+        <div className="relative mx-auto">
+          <div className="relative ">
+            <Image
+              className="h-full w-full object-cover"
+              src={Game5.src}
+              alt=""
+              width={1600}
+              height={900}
+            />
+          </div>
+          <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
+            <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
+              <div className="">
+                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                  High Orbit <i className="text-xs text-white/50 inline font-normal">Seeking Investors</i>
+                </h2>
+                <p className="text-sm leading-7 text-gray-300">
+                  A worms-like artillery battler
+                </p>
+              </div>
+              <div className="text-xs bg-white/20 text-center py-1 px-2 leading-1 rounded-full border border-white/30 flex flex-row items-center">
+                Funding <span className="w-[6px] h-[6px] ml-1 bg-red-400 rounded-full block"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <Link
+        href="/minimal/games"
+        className="primary-button button-outline text-md whitespace-nowrap px-12 py-3 text-center inline mx-auto"
+      >
+        View Games
+      </Link>
 
 
 
