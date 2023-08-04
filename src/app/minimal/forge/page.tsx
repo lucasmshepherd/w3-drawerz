@@ -28,104 +28,109 @@ import ClIcon from '@/assets/images/chainlink.svg';
 import OpenAiIcon from '@/assets/images/openai-white.svg';
 import LogoIcon from '@/assets/images/logo-sm.png';
 import '@/assets/css/home.scss';
+import '@/assets/css/forge.scss';
 // gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useBodyClass from '@/components/use-body-class';
 
 export default function NFT() {
-  useBodyClass('nft');
-  const [copyButtonStatus, setCopyButtonStatus] = useState(false);
-  const [_, copyToClipboard] = useCopyToClipboard();
-  gsap.registerPlugin(ScrollTrigger);
-  function handleCopyToClipboard() {
-    copyToClipboard('0xC687488603BC90B344C7c8d64C5BCc151D7bDc95');
-    setCopyButtonStatus(true);
-    setTimeout(() => {
-      setCopyButtonStatus(copyButtonStatus);
-    }, 2500);
+  useBodyClass('forge');
+
+  /*--------------------
+  Vars
+  --------------------*/
+  let progress = 50
+  let startX = 0
+  let active = 0
+  let isDown = false
+
+  /*--------------------
+  Contants
+  --------------------*/
+  const speedWheel = 0.02
+  const speedDrag = -0.1
+
+  /*--------------------
+  Get Z
+  --------------------*/
+  const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
+
+  /*--------------------
+  Items
+  --------------------*/
+  const $items = document.querySelectorAll('.carousel-item')
+  const $cursors = document.querySelectorAll('.cursor')
+
+  const displayItems = (item, index, active) => {
+    const zIndex = getZindex([...$items], active)[index]
+    item.style.setProperty('--zIndex', zIndex)
+    item.style.setProperty('--active', (index-active)/$items.length)
   }
 
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: ".samuraiana",
-      start: "top 33%",
-      toggleClass: "active",
-    });
-  }, []);
+  /*--------------------
+  Animate
+  --------------------*/
+  const animate = () => {
+    progress = Math.max(0, Math.min(progress, 100))
+    active = Math.floor(progress/100*($items.length-1))
+    
+    $items.forEach((item, index) => displayItems(item, index, active))
+  }
+  animate()
 
-  const features2 = [
-    {
-      name: 'Personalities',
-      description: 'The staking system and staking pool will enable users to lock RAYN tokens for long-term storage while simultaneously accruing daily rewards',
-      icon: Icon11,
-    },
-    {
-      name: 'Training',
-      description: 'The staking system and staking pool will enable users to lock RAYN tokens for long-term storage while simultaneously accruing daily rewards',
-      icon: Icon11,
-    },
-    {
-      name: 'Experience',
-      description: ' ',
-      icon: Icon11,
-    },
-    {
-      name: 'Backstory',
-      description: ' ',
-      icon: Icon11,
-    },
-    {
-      name: 'In-game Interactions',
-      description: 'It is expected that RAYN will gradually evolve a Decentralized Autonomous Organization that will be overseen by the community',
-      icon: Icon11,
-    },
-  ];
+  /*--------------------
+  Click on Items
+  --------------------*/
+  $items.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      progress = (i/$items.length) * 100 + 10
+      animate()
+    })
+  })
 
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: ".featurelist",
-      start: "top 65%",
-      toggleClass: "active",
-    });
-    gsap.fromTo('.fixedwhale', 
-      {opacity: .25},
-      {
-       opacity: 0,
-       scrollTrigger: {
-           trigger: '.whalesea',
-           start: 'top top',
-           end: 'bottom -50%',
-           scrub: true,
-       },})
-  }, []);
+  /*--------------------
+  Handlers
+  --------------------*/
+  const handleWheel = e => {
+    const wheelProgress = e.deltaY * speedWheel
+    progress = progress + wheelProgress
+    animate()
+  }
 
-  const stats = [
-    { id: 'first', name: 'Total Buy/Sell Tax', value: '5%' },
-    { id: 1, name: 'Marketing & Operations', value: '2%' },
-    { id: 2, name: 'Liquidity Pool', value: '1%' },
-    { id: 3, name: 'Developers', value: '2%' },
-  ]
+  const handleMouseMove = (e) => {
+    if (e.type === 'mousemove') {
+      $cursors.forEach(($cursor) => {
+        $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+      })
+    }
+    if (!isDown) return
+    const x = e.clientX || (e.touches && e.touches[0].clientX) || 0
+    const mouseProgress = (x - startX) * speedDrag
+    progress = progress + mouseProgress
+    startX = x
+    animate()
+  }
 
-  const features = [
-    {
-      name: 'Staking System',
-      description: 'The staking system and staking pool will enable users to lock RAYN tokens for long-term storage while simultaneously accruing daily rewards'
-    },
-    {
-      name: 'Projects and Grants',
-      description: 'It is expected that RAYN will gradually evolve a Decentralized Autonomous Organization that will be overseen by the community'
-    },
-    {
-      name: 'Event Access',
-      description: 'Invitations to exclusive events, online and otherwise, which relate to the platform'
-    },
-    {
-      name: 'VIP Whitelists',
-      description: 'Early access to new brands launching on our platform including alpha and offerings'
-    },
-  ]
+  const handleMouseDown = e => {
+    isDown = true
+    startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
+  }
 
+  const handleMouseUp = () => {
+    isDown = false
+  }
+
+  /*--------------------
+  Listeners
+  --------------------*/
+  document.addEventListener('mousewheel', handleWheel)
+  document.addEventListener('mousedown', handleMouseDown)
+  document.addEventListener('mousemove', handleMouseMove)
+  document.addEventListener('mouseup', handleMouseUp)
+  document.addEventListener('touchstart', handleMouseDown)
+  document.addEventListener('touchmove', handleMouseMove)
+  document.addEventListener('touchend', handleMouseUp)
 
   return(
     <>
@@ -167,12 +172,6 @@ export default function NFT() {
               >
                 Coming Soon
               </Link>
-              <a
-                href="https://app.rewardz.network/mint-nft"
-                className="text-md mx-2 font-semibold leading-6 text-color1"
-              >
-                Learn More
-              </a>
             </div>
           </div>
           <div className="lg:mr-0 lg:max-w-none flex row grow justify-center order-first lg:order-2 items-center py-24">
@@ -208,194 +207,77 @@ export default function NFT() {
 
 
 
+<div className="carousel -mx-8 px-16 bg-color5 relative">
+  <span className="absolute top-6 right-6 px-3 py-2">DEMO</span>
+	<div className="carousel-item">
+		<div className="carousel-box">
+			<div className="title">Paris</div>
+			<div className="num">01</div>
+			<img src="https://rewardz.network/images/1.jpg" />
+		</div>
+	</div>
 
+	<div className="carousel-item">
+		<div className="carousel-box">
+			<div className="title">Warsaw</div>
+			<div className="num">02</div>
+			<img src="https://rewardz.network/images/2.jpg" />
+		</div>
+	</div>
 
-      <div className="samurairow relative z-10">
-        <div className="mx-auto max-w-7xl py-8 sm:px-6 sm:py-4 lg:px-8">
-          <div className="relative isolate px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left flex flex-col items-start justify-center">
-              <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
-                Trai<span className="hype-2">t</span>s 2.0
-              </h2>
-              <p className="mt-2 text-3xl md:text-4xl font-normal tracking-tight w-full">
-                Bring your NFTs to life with Artificial Intelligence
-              </p>
-              <p className="mt-6 mb-10 text-lg leading-8 text-gray-300">
-                We tapped into OpenAI API and decided to hook it up to NFT
-                traits and have some fun
-              </p>
-              <dl className="featurelist space-y-6 max-w-xl text-base leading-7 lg:max-w-none">
-                  {features2.map((feature) => (
-                    <>
-                      <div key={feature.name} className="relative flex flex-row">
-                        <div className="mr-3 flex h-10 w-10 basis-10 items-center justify-center rounded-md bg-color8">
-                          {/* <feature.icon className="h-6 w-6 text-white" aria-hidden="true" /> */}
-                          <Image
-                            alt="icon"
-                            src={feature.icon}
-                            width={48}
-                            height={48}
-                          />
-                        </div>
-                        <dt className="inline pt-[6px] text-lg font-medium">
-                          {feature.name}
-                        </dt>
-                      </div>
-{/*                       <p className="mb-6 p-3 mt-2 border border-indigo-900 rounded-lg text-base">
-                        <span className="block">{feature.description}</span>
-                      </p> */}
-                    </>
-                  ))}
-                </dl>
-            </div>
-            <div className="samuraiana relative py-16 w-full flex flex-col items-center justify-center -ml-16">
-                <Image
-                className="samtop max-w-100"
-                src={PersonsA.src}
-                alt="Samurai"
-                width={858}
-                height={865}
-              />
-                <Image
-                className="sammid max-w-100"
-                src={Persons.src}
-                alt="Samurai"
-                width={858}
-                height={865}
-              />
-                <Image
-                className="sambot max-w-100"
-                src={Persons.src}
-                alt="Samurai"
-                width={858}
-                height={865}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+	<div className="carousel-item">
+		<div className="carousel-box">
+			<div className="title">Madrid</div>
+			<div className="num">03</div>
+			<img
+				src="https://rewardz.network/images/3.jpg"
+			/>
+		</div>
+	</div>
 
+	<div className="carousel-item">
+		<div className="carousel-box">
+			<div className="title">Sydney</div>
+			<div className="num">04</div>
+			<img src="https://rewardz.network/images/4.jpg" />
+		</div>
+	</div>
 
+	<div className="carousel-item">
+		<div className="carousel-box">
+			<div className="title">Istanbul</div>
+			<div className="num">05</div>
+			<img src="https://rewardz.network/images/5.jpg" />
+		</div>
+	</div>
 
+	<div className="carousel-item">
+		<div className="carousel-box">
+			<div className="title">Prague</div>
+			<div className="num">06</div>
+			<img src="https://rewardz.network/images/6.jpg" />
+		</div>
+	</div>
 
+	<div className="carousel-item">
+		<div className="carousel-box">
+			<div className="title">Munich</div>
+			<div className="num">07</div>
+			<img src="https://rewardz.network/images/7.jpg" />
+		</div>
+	</div>
 
-    <div className="-mr-8 mt-16 overflow-hidden py-16 pr-8 sm:py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div className="lg:mr-auto lg:pr-4 lg:pt-4">
-              <div className="lg:max-w-lg">
-                <h2 className="hype-1 text-[2em] md:text-[3em] leading-7 text-color4">
-                  Inc<span className="hype-2">enti</span>ves
-                </h2>
-                <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full mb-10">
-                  Power Up
-                </p>
-                <p className="mt-6 text-lg leading-8">
-                  The Rewardz® Network is designed to be a community-driven project, and thus our objective is to strike a sensible balance between the supply and demand of tokens, while optimizing incentives for all participants
-                </p>
-              </div>
-            </div>
-            <div className="masker masker2 flex items-center justify-center lg:-mr-32 lg:ml-16">
+	<div className="carousel-item">
+		<div className="carousel-box">
+			<div className="title">Venice</div>
+			<div className="num">08</div>
+			<img src="https://rewardz.network/images/8.jpg" />
+		</div>
+	</div>
+</div>
 
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-    <div className="pt-24 sm:pt-32">
-      <div className="mx-auto max-w-7xl w-full text-center">
-        <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
-          RAYN Flow
-        </h2>
-        <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full mb-10">
-          Buy & Sell Taxes
-        </p>
-      </div>
-      <div className="mx-auto max-w-7xl px-2 py-8 rounded-lg gradbg">
-        <dl className="grid grid-cols-4 gap-y-16 text-center lg:grid-cols-4">
-          {stats.map((stat) => (
-            <>
-              <div key={stat.id} id={stat.id} className="statcell mx-auto px-2 flex max-w-xs flex-col justify-center gap-y-4">
-                <dt className="text-base leading-7 text-gray-400">{stat.name}</dt>
-                <dd className="order-first text-2xl leading-tight tracking-tight text-white sm:text-3xl">{stat.value}</dd>
-              </div>
-            </>
-          ))}
-        </dl>
-      </div>
-    </div>
-
-
-
-  {/* Hero */}
-  <div id="waterframe" className="nft-banner relative flex flex-row justify-start bg-black items-center -mx-8 px-16 py-24 -mb-24">
-    <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Announcement Banner */}
-      <div className="text-center">
-        <a
-          href="https://etherscan.io/address/0xC687488603BC90B344C7c8d64C5BCc151D7bDc95"
-          title="Runtz NFT Contract"
-          className="inline-flex space-x-6 mx-auto"
-          target="_blank"
-        >
-          <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-white ring-1 ring-inset ring-indigo-500/20">
-            Etherscan.io ↗
-          </span>
-        </a>
-      </div>
-      {/* End Announcement Banner */}
-      {/* Title */}
-      <div className="mt-5 text-center mx-auto">
-        <h1 className="block font-light text-4xl tracking-tight md:text-5xl lg:text-6xl">
-          Runtz NFT Community
-        </h1>
-      </div>
-      {/* End Title */}
-      <div className="mt-5 max-w-xl text-center mx-auto">
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          Partnered with The Rewardz® Network
-        </p>
-      </div>
-      {/* Buttons */}
-      <div className="mt-8 grid gap-3 w-full sm:inline-flex sm:justify-center">
-        <a
-          className="copypill relative group inline-flex justify-center items-center gap-x-3.5 text-center text-sm font-medium rounded-md transition p-2 pl-4 shadow-slate-700/[.7] text-white"
-          href="javascript:;" 
-          onClick={() => handleCopyToClipboard()}
-        >
-          <span className="caddress pr-3 text-sm md:text-base lg:text-lg">0xC687488603BC90B344C7c8d64C5BCc151D7bDc95</span>
-          <span className="flex justify-center items-center rounded-md w-7 h-7 bg-gray-700 text-gray-400">
-            {copyButtonStatus ? (
-              <Check className="h-auto w-3.5 text-green-500" />
-            ) : (
-              <Copy className="h-auto w-3.5" />
-            )}
-          </span>
-        </a>
-      </div>
-      {/* End Buttons */}
-
-      <div className="mt-10 mx-auto flex justify-center items-center gap-x-6">
-        <Link
-          href="https://app.rewardz.network/mint-nft"
-          target="_blank"          
-          className="primary-button text-md whitespace-nowrap px-12 py-3 text-center"
-        >
-          Mint Now{/*  <span aria-hidden="true">↗</span> */}
-        </Link>
-        <Link
-          href="https://opensea.io/collection/runtzcommunity"
-          target="_blank"
-          className="text-md mx-2 font-semibold leading-6 text-white"
-        >
-          View Collection ↗
-        </Link>
-      </div>
-    </div>
-  </div>
-  {/* End Hero */}
+<div className="cursor"></div>
+<div className="cursor cursor2"></div>
 
 
 

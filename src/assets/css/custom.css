@@ -80,6 +80,10 @@ body.nft .bodybg {
   background: linear-gradient(-45deg, #0b0010, #220033);
 }
 
+body.forge .banner-main {
+  background: linear-gradient(-45deg, #000, #14001d);
+}
+
 body.games .bodybg {
   background: linear-gradient(-45deg, #000, #14001d);
 }
