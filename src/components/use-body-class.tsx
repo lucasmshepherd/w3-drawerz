@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 
-const addBodyClass = (className) => document.body.classList.add(className);
-const removeBodyClass = (className) =>
-  document.body.classList.remove(className);
-
 export default function useBodyClass(className) {
+  const addBodyClass = (className) => document.body.classList.add(className);
+  const removeBodyClass = (className) => document.body.classList.remove(className);
   useEffect(() => {
     // Set up
     className instanceof Array

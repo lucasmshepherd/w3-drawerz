@@ -33,13 +33,15 @@ import ClIcon from '@/assets/images/chainlink.svg';
 import OpenAiIcon from '@/assets/images/openai-white.svg';
 import PersonsA from '@/assets/images/samurai.gif';
 import Persons from '@/assets/images/samurai.png';
+import RobotBanner from '@/assets/images/basechest.gif';
 import Video from '@/components/video';
+import VideoMain from '@/assets/videos/forged_1.mp4';
 import Game from '@/assets/images/aliens.jpg';
+import '@/assets/css/home.scss';
 
 //import BaseGlobe from '@/assets/images/content/base-logo-in-blue.webp';
 import useBodyClass from '../use-body-class';
 import Link from 'next/link';
-import '@/assets/css/home.scss';
 // gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -197,16 +199,11 @@ export default function Home() {
         }}
       />
 
-      <div className="banner-main flow-row relative isolate flex items-center lg:pt-[96px] lg:-mt-[96px]">
+      <div className="banner-main-home flow-row relative isolate flex items-center pb-24 -mx-4 lg:pt-[96px] lg:-mt-[96px] md:-mx-6 md:px-12 lg:-mx-8 lg:px-16">
         <div className="mx-auto max-w-7xl w-full px-6 column flex-col lg:flex-row flex items-center lg:px-8">
           <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl grow relative z-20">
 
-            <div>
-              <a
-                href="#based"
-                title="Base Layer-2 for Ethereum from Coinbase"
-                className="inline-flex space-x-6"
-              >
+            <div className="inline-flex items-center space-x-6">
                 <span className="flex flex-row rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-white ring-1 ring-inset ring-indigo-500/20">
                   <Image
                     className="mr-1 inline"
@@ -216,36 +213,34 @@ export default function Home() {
                     width={12}
                     height={12}
                   />
-                  Building on Base
+                  Base L2
                 </span>
-                {/* <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
-                <span>Just shipped v1.0</span>
-                 <ChevronRightIcon className="h-5 w-5 text-gray-500" aria-hidden="true" />
-              </span> */}
-              </a>
+               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
+                <span className="text-sm text-color4">Mainnet August 9th!</span>
+              </span>
             </div>
             <h1 className="mt-6 text-4xl font-light tracking-tight text-white sm:text-6xl">
-              Start Collecting Daily Rewards
+              Built Different
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Use the Arcane Forge to seek and craft items
+            <p className="mt-6 max-w-[25em] text-lg leading-8 text-gray-300">
+              Base is a security-first layer 2 for Ethereum with easy access to Coinbase web3 APIS
             </p>
             
             <div className="mt-10 flex items-center gap-x-6">
               <Link
-                href="#"
-                
-                className="primary-button text-md whitespace-nowrap px-12 py-3 text-center"
-              >
-                Daily Forge
-              </Link>
-              <a
                 href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x562d8e607bed7fc183ca84c0362c853680b99638"
                 target="_blank"
-                className="text-md mx-2 font-semibold leading-6 text-white"
+                className="primary-button text-md whitespace-nowrap px-12 py-3 text-center"
               >
-                Buy Tokens ↗
-              </a>
+                Buy RAYN
+              </Link>
+              <Link
+                href="/minimal/token"
+                target="_blank"
+                className="text-md mx-2 text-color1 leading-6 font-semibold"
+              >
+                Learn More →
+              </Link>
             </div>
             <div className="mt-12 flex inline-flex flex-row">
               <Image
@@ -290,37 +285,30 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="lg:mr-0 lg:max-w-none flex row grow justify-center order-first lg:order-2 items-center py-24">
+          <div className="lg:mr-0 lg:max-w-[50%] flex row grow justify-center order-first lg:order-2 items-center pb-12 lg:py-24">
 
-
-            <div className="card-main">
-          
-              <div className="card-front">
-                <div className="chip">
-                  <svg role="img" viewBox="0 0 100 100" aria-label="Chip">
-                    <use href="#chip-lines" />
-                  </svg>
-                </div>
-                <svg className="contactless" role="img" viewBox="0 0 24 24" aria-label="Contactless">
-                  <use href="#contactless" />
-                </svg>
-              </div>
-              
+            <div className="mainvid">
+              <video autoPlay loop muted className="mix-blend-screen md:-my-32 md:max-h-[500px] lg:max-h-[none]">  
+                <source src="/assets/videos/forged_1.mp4" type="video/mp4" />
+                <source src="/assets/videos/forged_1.webm" type="video/webm" />
+                <source src="/assets/videos/forged_1.webm" type="video/webm" />
+{/*                 <source src="https://rewardz.network/videos/rain_2.webm" type="video/webm" /> */}
+              </video>
             </div>
 
-{/*             <Image
+             {/* <Image
               src={RobotBanner.src}
               alt="Robot Banner"
-              width={934}
-              height={1080}
-              className="robotman"
+              width={512}
+              height={512}
+              className="robotman mix-blend-screen glich"
             /> */}
           </div>
         </div>
       </div>
 
 
-      <div id="grungerow" className="-mx-8 px-16 py-8 lg:-mt-4 relative">
+      <div id="grungerow" className="-mx-8 px-16 py-8 -mt-24 relative">
         <Video />
 
         <div className="relative pt-12 pb-6 relative z-10">
@@ -419,9 +407,9 @@ export default function Home() {
               </p>
               <Link
                 href="/minimal/token"
-                className="primary-button text-md whitespace-nowrap px-12 py-3 text-center"
+                className="primary-button button-outline text-md whitespace-nowrap px-12 py-3 text-center"
               >
-                Tokenomics
+                Learn More
               </Link>
 {/*               <ul
                 role="list"
@@ -539,7 +527,7 @@ export default function Home() {
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               With access to millions of users and a suite of onboarding tools,
-              Coinbase&apos;s new Layer-2 (L2) was the obvious location for us
+              Coinbase&apos;s new Layer 2 was the obvious location for us
               to launch our platform
             </p>
           </div>
@@ -593,7 +581,7 @@ export default function Home() {
 
             <div className="mx-auto max-w-2xl lg:mx-0 pt-24 pl-4">
               <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
-                Trust + Security
+                Security
               </h2>
               <p className="mt-2 text-3xl md:text-4xl font-light tracking-tight">
                 Base has been meticulously designed to stand as a beacon of
@@ -638,15 +626,14 @@ export default function Home() {
             </div>
             <div className="chartcol flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-md bg-color2 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
               <p className="hype-1 text-[4em] flex-none text-3xl font-bold tracking-tight text-white">
-                0
+                10<span className="text-[.5em] pl-1 inline-block">x</span>
               </p>
               <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
                 <p className="text-lg font-semibold tracking-tight text-white">
-                  Dapps on Mainnet
+                  Cheaper than Layer 1
                 </p>
                 <p className="text-white/8 mt-2 text-base leading-7">
-                  We are pioneering with Base and are patiently waiting for
-                  mainnet to <i>launch!</i>
+                  By bundling transactions we lower fees and improve UX
                 </p>
               </div>
             </div>

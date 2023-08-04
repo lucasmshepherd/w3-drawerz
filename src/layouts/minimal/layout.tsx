@@ -22,7 +22,7 @@ import { ConnectWallet, useAddress } from '@thirdweb-dev/react';
 // styles
 import styles from '@/assets/css/web3.module.css';
 
-function NotificationButton() {
+/* function NotificationButton() {
   const { layout } = useLayout();
   return (
     <ActiveLink
@@ -33,7 +33,6 @@ function NotificationButton() {
       }>
       <div className="rnd-button relative flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full text-brand shadow-main transition-all hover:-translate-y-0.5 hover:shadow-large focus:-translate-y-0.5 focus:shadow-large focus:outline-none dark:text-white sm:h-12 sm:w-12">
         <FlashIcon className="h-auto w-3 sm:w-auto" />
-        {/*<span className="absolute top-0 right-0 h-2.5 w-2.5 rounded-full bg-brand shadow-light dark:bg-slate-50 sm:h-3 sm:w-3" />*/}
       </div>
     </ActiveLink>
   );
@@ -44,11 +43,10 @@ function ProfileButton() {
     <ActiveLink href={`/user/profile/`}>
       <div className="rnd-button relative flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white text-brand shadow-main transition-all hover:-translate-y-0.5 hover:shadow-large focus:-translate-y-0.5 focus:shadow-large focus:outline-none dark:text-white sm:h-12 sm:w-12">
         <ProfileIcon className="h-auto w-3 sm:w-auto" />
-        {/* <span className="absolute top-0 right-0 h-2.5 w-2.5 rounded-full bg-brand shadow-light dark:bg-slate-50 sm:h-3 sm:w-3" /> */}
       </div>
     </ActiveLink>
   );
-}
+} */
 
 function HeaderRightArea() {
   const address = useAddress();
@@ -58,17 +56,13 @@ function HeaderRightArea() {
   return (
     <div className="order-last flex shrink-0 items-center">
       <div className="hidden lg:flex lg:items-center gap-4">
-        {address && <NotificationButton />}
-        {address && <ProfileButton />}
-        <ConnectWallet
-          className={styles.connected}
-          btnTitle="Connect"
-          modalTitle="Rewardz® Network"
-        />
+        {/* {address && <NotificationButton />}
+        {address && <ProfileButton />} */}
+        <a href="https://app.rewardz.network" className="primary-button button-outline text-md whitespace-nowrap px-12 py-3 text-center">Launch App</a>
       </div>
 
       <div className="flex items-center lg:hidden">
-        {address && <NotificationButton />}
+        {/* {address && <NotificationButton />} */}
         <Hamburger
           isOpen={isOpen}
           onClick={() => openDrawer('MOBILE_MENU')}

@@ -75,6 +75,11 @@ body, html {
   z-index: -1;
 }
 
+body.nft .bodybg {
+  /* background: linear-gradient(-45deg, #000, #14001d); */
+  background: linear-gradient(-45deg, #0b0010, #220033);
+}
+
 .font-semibold {
   font-weight: 700;
 }
@@ -328,13 +333,23 @@ body {
   max-width: 1400px;
 } */
 
+.mainvid {
+  background: rgba(0,0,0,0);
+}
+
+.banner-main-home {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #0b0010, #220033);
+}
+
 .banner-main {
-  min-height: calc(100vh - 96px);
+  min-height: 100vh;
+  /* background: linear-gradient(-45deg, #000, #14001d); */
 }
 
 .robotman {
-  animation: floatingMan 13s ease-in-out alternate infinite;
-  z-index: -1;
+  /* animation: floatingMan 13s ease-in-out alternate infinite; */
+  /* z-index: -1; */
 }
 
 @media (max-width: 1023px) {
@@ -349,7 +364,7 @@ body {
   }
 }
 
-@keyframes floatingMan {
+/* @keyframes floatingMan {
   0% {
     margin-top: 140px;
   }
@@ -365,7 +380,7 @@ body {
   100% {
     margin-top: 150px;
   }
-}
+} */
 
 #cardrow {
   perspective: 800px;
@@ -404,6 +419,12 @@ body {
   opacity: 1;
 }
 
+#waterframe .video_video___jNCo,
+#grungerow .video_video___jNCo {
+  background: #000;
+}
+
+#waterframe img,
 #grungerow img {
   opacity: 0;
   transform: scale(.5);
@@ -411,6 +432,7 @@ body {
   transition: opacity 0.3s, transform 0.6s, margin 0.3s;
 }
 
+#waterframe.active img,
 #grungerow.active img {
   opacity: 1;
   transform: scale(1);
@@ -570,6 +592,11 @@ button.tw-connected-wallet {
   background-size: cover;
 }
 
+.masker3 {
+  background: url('../images/scientist.jpg') no-repeat 0 50%;
+  background-size: cover;
+}
+
 .featurelist > div {
   opacity: 0;
   transition: 0.3s;
@@ -584,7 +611,7 @@ button.tw-connected-wallet {
 }
 
 .samuraiana img {
-  /* mix-blend-mode: overlay; */
+  max-width: 600px;
 }
 
 img.sammid,
@@ -598,6 +625,7 @@ img.sambot {
   margin-left: 0;
   filter: hue-rotate(0deg) blur(0);
   transition: all 0.3s ease-in-out;
+  
 }
 
 img.sambot {
@@ -615,6 +643,7 @@ img.sambot {
   filter: hue-rotate(100deg) blur(6px);
 }
 
+#waterframe,
 #grungerow {
   background-size: cover;
   mask-image: url('../images/grunge-frame-3.svg');
@@ -622,6 +651,12 @@ img.sambot {
   min-height: 300px;
   transition: opacity 0.3s;
 }
+
+#waterframe {
+  mask-image: url('../images/water-frame-01.svg');
+}
+
+#waterframe video,
 #grungerow video {
   z-index: -1;
 }
@@ -679,12 +714,24 @@ span.svgicon svg {
   outline: 0;
   border: none;
   background-color: #3C4CE5;
-  transition: opacity 300ms;
+  transition: opacity 300ms, border-color 300ms;
   border-radius: 5px;
   font-weight: 500;
   overflow: hidden;
 }
 
+.primary-button.button-outline {
+  background: none;
+  border: 1px solid #3C4CE5;
+}
+
+.primary-button.button-outline:hover,
+.primary-button.button-outline:active {
+  border-color: #d4a883;
+}
+
+.primary-button.button-disabled:before,
+.primary-button.button-outline:before,
 .primary-button:before {
   content: '';
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAAL+1RLAAAAF0lEQVQIW2NkwAIYgWKS6OIgQQxAoUoAE4AAUnD/0ugAAAAASUVORK5CYII=") repeat;
@@ -695,7 +742,9 @@ span.svgicon svg {
   right: 0;
   bottom: 0;
 }
-    
+
+.primary-button.button-disabled:after,
+.primary-button.button-outline:after,
 .primary-button:after {
   content: '';
   position: absolute;
@@ -708,7 +757,10 @@ span.svgicon svg {
   height: 1px;
   opacity: 0;
 }
-    
+
+.primary-button.button-disabled,
+.primary-button.button-outline:active,
+.primary-button.button-outline:hover,
 .primary-button:active,
 .primary-button:hover {
   background: #d4a883;
@@ -718,15 +770,26 @@ span.svgicon svg {
   color: #220033;
 }
 
+.primary-button.button-disabled:before,
+.primary-button.button-outline:hover:active:before,
+.primary-button.button-outline:hover:before,
 .primary-button:hover:active:before,
 .primary-button:hover:before {
   opacity: 1;
 }
 
+.primary-button.button-disabled:after,
+.primary-button.button-outline:hover:active:after,
+.primary-button.button-outline:hover:after,
 .primary-button:hover:active:after,
 .primary-button:hover:after {
   animation: scan 2s infinite ;
   opacity: 1;
+}
+
+.primary-button.button-disabled {
+  background: rgba(255,255,255,.4);
+  cursor: not-allowed;
 }
     
     
@@ -880,4 +943,10 @@ span.svgicon svg {
     line-height: 1.2;
   }
 
+}
+
+.nft-banner {
+  background: url("../images/tbanner3.jpg") no-repeat 0 50%;
+  background-size: cover;
+  margin-bottom: -60px;
 }

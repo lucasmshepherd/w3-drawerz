@@ -450,26 +450,26 @@ body.welcome .main-main {
 }
 @keyframes glitch-3 {
   0% {opacity:0}
-  2% {opacity:0;top:0}
-  3% {opacity:1;top:10vh}
-  4% {opacity:1;top:5vh}
-  5% {opacity:0;top:0}
-  60% {opacity:0;top:0}
-  61% {opacity:1;top:-39px}
-  62% {opacity:1;top:-60px}
-  63% {opacity:0;top:0}
+  2% {opacity:0;right:0}
+  3% {opacity:1;right:10vh}
+  4% {opacity:1;right:5vh}
+  5% {opacity:0;right:0}
+  60% {opacity:0;right:0}
+  61% {opacity:1;right:-39px}
+  62% {opacity:1;right:-60px}
+  63% {opacity:0;right:0}
   100% {opacity:0}
 }
 @-webkit-keyframes glitch-3 {
   0% {opacity:0}
-  2% {opacity:0;top:0}
-  3% {opacity:1;top:10vh}
-  4% {opacity:1;top:5vh}
-  5% {opacity:0;top:0}
-  60% {opacity:0;top:0}
-  61% {opacity:1;top:-39px}
-  62% {opacity:1;top:-60px}
-  63% {opacity:0;top:0}
+  2% {opacity:0;right:0}
+  3% {opacity:1;right:10vh}
+  4% {opacity:1;right:5vh}
+  5% {opacity:0;right:0}
+  60% {opacity:0;right:0}
+  61% {opacity:1;right:-39px}
+  62% {opacity:1;right:-60px}
+  63% {opacity:0;right:0}
   100% {opacity:0}
 }
 

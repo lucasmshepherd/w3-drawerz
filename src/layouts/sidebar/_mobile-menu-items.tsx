@@ -14,13 +14,13 @@ export const mobileMenuItems = [
   {
     name: 'Token',
     icon: <HomeIcon />,
-    href: routes.token,
+    href: '/minimal/token',
     link: '',
   },
   {
-    name: 'About',
-    icon: <CompassIcon />,
-    href: routes.about,
+    name: 'NFT',
+    icon: <FarmIcon />,
+    href: '/minimal/nft',
     link: '',
   },
   {

@@ -50,8 +50,7 @@ export function MenuItems() {
                         <div>
                           <ActiveLink
                             href={{
-                              pathname:
-                                routes.home + layout + dropDownItem.href,
+                              pathname: dropDownItem.href,
                             }}
                             className="block rounded-lg px-3 py-2 text-sm font-medium !text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 dark:!text-white dark:hover:bg-gray-700/50"
                             activeClassName="!bg-gray-100 dark:!bg-gray-700 my-1 last:mb-0 first:mt-0 !text-gray-900 dark:!text-white"
@@ -68,8 +67,7 @@ export function MenuItems() {
           ) : (
             <ActiveLink
               href={{
-                pathname:
-                  routes.home + layout + (item.href !== '/' ? item.href : ''),
+                pathname: item.href,
               }}
               className="mx-3 text-[13px] font-medium text-gray-600 transition first:ml-0 last:mr-0 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white 2xl:mx-3 2xl:text-sm 3xl:mx-4"
               activeClassName="!text-gray-900 dark:!text-white"
@@ -118,11 +116,7 @@ export default function DrawerMenu() {
         </div>
       </Scrollbar>
       <div className="absolute bottom-4 right-0 z-10 w-full px-6">
-        <ConnectWallet
-          className={styles.connected}
-          btnTitle="Connect"
-          modalTitle="Rewardz® Network"
-        />
+        <a href="https://app.rewardz.network" className="primary-button button-outline text-md whitespace-nowrap px-12 py-3 text-center">Launch App</a>
       </div>
     </div>
   );

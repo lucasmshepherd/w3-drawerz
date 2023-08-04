@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { useCopyToClipboard } from 'react-use';
 import { Check } from '@/components/icons/check';
 import { Copy } from '@/components/icons/copy';
-import { ExternalLink } from '@/components/icons/external-link';
 import Video from '@/components/video';
 import WalletCard from '@/components/ui/wallet-card';
 import Icon1 from '@/assets/images/icons/icons_ethereum.svg';
@@ -21,15 +20,14 @@ import Icon9 from '@/assets/images/icons/icons_gasless.svg';
 import Icon10 from '@/assets/images/icons/icons_mobile.svg';
 import Icon11 from '@/assets/images/icons/icons_nft.svg';
 import Icon12 from '@/assets/images/icons/icons_coins.svg';
-
 // gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 export default function TokenPage() {
   const [copyButtonStatus, setCopyButtonStatus] = useState(false);
   const [_, copyToClipboard] = useCopyToClipboard();
+  gsap.registerPlugin(ScrollTrigger);
   function handleCopyToClipboard() {
     copyToClipboard('0x562d8e607bed7fc183ca84c0362c853680b99638');
     setCopyButtonStatus(true);
@@ -198,7 +196,7 @@ export default function TokenPage() {
           Buy Tokens{/*  <span aria-hidden="true">↗</span> */}
         </Link>
         <Link
-          href="/modern"
+          href="https://app.rewardz.network/"
           className="text-md mx-2 font-semibold leading-6 text-white"
         >
           Launch App
@@ -311,7 +309,7 @@ export default function TokenPage() {
 
 
 
-    <div className="pt-24 sm:pt-32 ">
+    <div className="pt-24 sm:pt-32">
       <div className="mx-auto max-w-7xl w-full text-center">
         <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
           RAYN Flow

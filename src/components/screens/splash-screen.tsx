@@ -116,7 +116,7 @@ document.addEventListener('touchend', handleMouseUp) */
 		<div className="intro">
 		<div className="glitch">
 			<div className="glitch-1"></div>
-			<div className="glitch-2"></div>
+
 			<div className="glitch-3"></div>
 			<div className="glitch_img"></div>
 			<div className="jm"> 雨来了</div>
