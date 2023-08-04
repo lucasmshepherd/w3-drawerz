@@ -9,9 +9,8 @@ import { LongArrowRight } from '@/components/icons/long-arrow-right';
 import '@/assets/css/splash.scss';
 
 export default function Splash() {
-  useBodyClass('welcome');
 
-
+useBodyClass('welcome');
 
 
 
@@ -39,7 +38,7 @@ export default function Splash() {
 		<div className="md:basis-1/4 basis-[100%] text-center">
 			<Link
 				type="button"
-				href="/minimal"
+				href="/home"
 				className="inline-flex items-center gap-x-2 rounded-md bg-color1 px-8 py-4 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 			>
 				Explore

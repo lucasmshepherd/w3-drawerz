@@ -31,14 +31,8 @@ import BaseIcon from '@/assets/images/base-logo-in-blue.svg';
 import CbIcon from '@/assets/images/cb-wallet.svg';
 import ClIcon from '@/assets/images/chainlink.svg';
 import OpenAiIcon from '@/assets/images/openai-white.svg';
-import PersonsA from '@/assets/images/samurai.gif';
-import Persons from '@/assets/images/samurai.png';
-import RobotBanner from '@/assets/images/basechest.gif';
 import Video from '@/components/video';
 import Game1 from '@/assets/images/games1.jpg';
-import Game2 from '@/assets/images/games2.jpg';
-import Game3 from '@/assets/images/games3.jpg';
-import Game4 from '@/assets/images/games4.jpg';
 import Game5 from '@/assets/images/games5.jpg';
 import '@/assets/css/home.scss';
 
@@ -48,11 +42,10 @@ import Link from 'next/link';
 // gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   useBodyClass('home');
-
+  gsap.registerPlugin(ScrollTrigger);
   const chartCols = gsap.utils.toArray(".chartcol");
 
   useEffect(() => {

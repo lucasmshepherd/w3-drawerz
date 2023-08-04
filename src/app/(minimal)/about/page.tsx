@@ -1,5 +1,5 @@
 
-'use client'
+'use client';
 
 import { useEffect } from 'react';
 import Image from 'next/image';
@@ -19,9 +19,9 @@ import Icon12 from '@/assets/images/icons/icons_coins.svg';
 // gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 export default function IndexPageMinimal() {
+  gsap.registerPlugin(ScrollTrigger);
 
   const features2 = [
     {

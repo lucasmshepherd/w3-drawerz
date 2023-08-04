@@ -1,37 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { useCopyToClipboard } from 'react-use';
-import { Check } from '@/components/icons/check';
-import { Copy } from '@/components/icons/copy';
-import Video from '@/components/video';
-import WalletCard from '@/components/ui/wallet-card';
-import Icon1 from '@/assets/images/icons/icons_ethereum.svg';
-import Icon2 from '@/assets/images/icons/icons_users.svg';
-import Icon3 from '@/assets/images/icons/icons_cheaper.svg';
-import Icon4 from '@/assets/images/icons/icons_wallet.svg';
-import Icon5 from '@/assets/images/icons/icons_opensource.svg';
-import Icon6 from '@/assets/images/icons/icons_defi.svg';
-import Icon7 from '@/assets/images/icons/icons_easy-tx.svg';
-import Icon8 from '@/assets/images/icons/icons_gaming.svg';
-import Icon9 from '@/assets/images/icons/icons_gasless.svg';
-import Icon10 from '@/assets/images/icons/icons_mobile.svg';
-import Icon11 from '@/assets/images/icons/icons_nft.svg';
-import Icon12 from '@/assets/images/icons/icons_coins.svg';
-import PersonsA from '@/assets/images/samurai.gif';
-import Persons from '@/assets/images/samurai.png';
-import BaseIcon from '@/assets/images/base-logo-in-blue.svg';
-import CbIcon from '@/assets/images/cb-wallet.svg';
-import ClIcon from '@/assets/images/chainlink.svg';
-import OpenAiIcon from '@/assets/images/openai-white.svg';
+import Gemz1 from '@/assets/images/loot/gemcard_amethyst.jpg';
+import Gemz2 from '@/assets/images/loot/gemcard_bag.jpg';
+import Gemz3 from '@/assets/images/loot/gemcard_peridot.jpg';
+import Gemz4 from '@/assets/images/loot/gemcard_seed.jpg';
+import Gemz5 from '@/assets/images/loot/gemcard_sludgegem.jpg';
+import Gemz6 from '@/assets/images/loot/gemcard_pearl.jpg';
+import Gemz7 from '@/assets/images/loot/gemcard_onyx.jpg';
+import Gemz8 from '@/assets/images/loot/gemcard_box.jpg';
 import LogoIcon from '@/assets/images/logo-sm.png';
-import '@/assets/css/home.scss';
-import '@/assets/css/forge.scss';
-// gsap
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useBodyClass from '@/components/use-body-class';
 
 export default function NFT() {
@@ -213,7 +192,13 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Paris</div>
 			<div className="num">01</div>
-			<img src="https://rewardz.network/images/1.jpg" />
+			<Image  className="pr-1 inline -m-[8px]"
+              src={Gemz1.src}
+              alt="Gemz"
+              title="Gemz"
+              width={100}
+              height={300}
+       />
 		</div>
 	</div>
 
@@ -221,7 +206,13 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Warsaw</div>
 			<div className="num">02</div>
-			<img src="https://rewardz.network/images/2.jpg" />
+			<Image  className="pr-1 inline -m-[8px]"
+              src={Gemz2.src}
+              alt="Gemz"
+              title="Gemz"
+              width={100}
+              height={300}
+       />
 		</div>
 	</div>
 
@@ -229,9 +220,13 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Madrid</div>
 			<div className="num">03</div>
-			<img
-				src="https://rewardz.network/images/3.jpg"
-			/>
+			<Image  className="pr-1 inline -m-[8px]"
+              src={Gemz3.src}
+              alt="Gemz"
+              title="Gemz"
+              width={100}
+              height={300}
+       />
 		</div>
 	</div>
 
@@ -239,7 +234,13 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Sydney</div>
 			<div className="num">04</div>
-			<img src="https://rewardz.network/images/4.jpg" />
+			<Image  className="pr-1 inline -m-[8px]"
+              src={Gemz4.src}
+              alt="Gemz"
+              title="Gemz"
+              width={100}
+              height={300}
+       />
 		</div>
 	</div>
 
@@ -247,7 +248,13 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Istanbul</div>
 			<div className="num">05</div>
-			<img src="https://rewardz.network/images/5.jpg" />
+			<Image  className="pr-1 inline -m-[8px]"
+              src={Gemz5.src}
+              alt="Gemz"
+              title="Gemz"
+              width={100}
+              height={300}
+       />
 		</div>
 	</div>
 
@@ -255,7 +262,13 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Prague</div>
 			<div className="num">06</div>
-			<img src="https://rewardz.network/images/6.jpg" />
+			<Image  className="pr-1 inline -m-[8px]"
+              src={Gemz6.src}
+              alt="Gemz"
+              title="Gemz"
+              width={100}
+              height={300}
+       />
 		</div>
 	</div>
 
@@ -263,7 +276,13 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Munich</div>
 			<div className="num">07</div>
-			<img src="https://rewardz.network/images/7.jpg" />
+			<Image  className="pr-1 inline -m-[8px]"
+              src={Gemz7.src}
+              alt="Gemz"
+              title="Gemz"
+              width={100}
+              height={300}
+       />
 		</div>
 	</div>
 
@@ -271,7 +290,13 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Venice</div>
 			<div className="num">08</div>
-			<img src="https://rewardz.network/images/8.jpg" />
+			<Image  className="pr-1 inline -m-[8px]"
+              src={Gemz8.src}
+              alt="Gemz"
+              title="Gemz"
+              width={100}
+              height={300}
+       />
 		</div>
 	</div>
 </div>

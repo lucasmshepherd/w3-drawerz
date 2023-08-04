@@ -3,18 +3,18 @@
 import { Suspense, useState, useEffect } from 'react';
 import Logo from '@/components/ui/logo';
 import cn from 'classnames';
-import { FlashIcon } from '@/components/icons/flash';
+/* import { FlashIcon } from '@/components/icons/flash';
 import { ProfileIcon } from '@/components/icons/profile';
-import ActiveLink from '@/components/ui/links/active-link';
+import ActiveLink from '@/components/ui/links/active-link'; */
 import Hamburger from '@/components/ui/hamburger';
 import { MenuItems } from '@/layouts/sidebar/_mobile-menu';
 import { useIsMounted } from '@/lib/hooks/use-is-mounted';
 import { useBreakpoint } from '@/lib/hooks/use-breakpoint';
 import { useDrawer } from '@/components/drawer-views/context';
 import { useWindowScroll } from '@/lib/hooks/use-window-scroll';
-import { useLayout } from '@/lib/hooks/use-layout';
+/* import { useLayout } from '@/lib/hooks/use-layout';
 import routes from '@/config/routes';
-import { LAYOUT_OPTIONS } from '@/lib/constants';
+import { LAYOUT_OPTIONS } from '@/lib/constants'; */
 import Loading from '@/components/loading';
 import Footer from '@/layouts/footer/footer';
 // web3

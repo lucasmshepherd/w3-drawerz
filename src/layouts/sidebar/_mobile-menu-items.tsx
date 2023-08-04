@@ -14,25 +14,25 @@ export const mobileMenuItems = [
   {
     name: 'Token',
     icon: <HomeIcon />,
-    href: '/minimal/token',
+    href: '/token',
     link: '',
   },
   {
     name: 'NFT',
     icon: <FarmIcon />,
-    href: '/minimal/nft',
+    href: '/nft',
     link: '',
   },
   {
     name: 'Games',
     icon: <FarmIcon />,
-    href: '/minimal/games',
+    href: '/games',
     link: '',
   },
   {
     name: 'Forge',
     icon: <FarmIcon />,
-    href: '/minimal/forge',
+    href: '/forge',
     link: '',
   },
   {

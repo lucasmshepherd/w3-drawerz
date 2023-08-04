@@ -12,13 +12,12 @@ import { useDrawer } from '@/components/drawer-views/context';
 import { useLayout } from '@/lib/hooks/use-layout';
 import { ChevronDown } from '@/components/icons/chevron-down';
 import { MenuItem } from '@/components/ui/collapsible-menu';
-import WalletConnect from '@/components/nft/wallet-connect';
 import { mobileMenuItems } from '@/layouts/sidebar/_mobile-menu-items';
-import routes from '@/config/routes';
+/* mport routes from '@/config/routes' */;
 // web3
-import { ConnectWallet } from '@thirdweb-dev/react';
+/* import { ConnectWallet } from '@thirdweb-dev/react'; */
 // styles
-import styles from '@/assets/css/web3.module.css';
+/* import styles from '@/assets/css/web3.module.css'; */
 
 export function MenuItems() {
   const { layout } = useLayout();
@@ -70,7 +69,7 @@ export function MenuItems() {
                 pathname: item.href,
               }}
               className="mx-3 text-[13px] font-medium text-gray-600 transition first:ml-0 last:mr-0 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white 2xl:mx-3 2xl:text-sm 3xl:mx-4"
-              activeClassName="!text-gray-900 dark:!text-white"
+              activeClassName="!text-gray-900 dark:!text-color4"
             >
               {item.name}
             </ActiveLink>

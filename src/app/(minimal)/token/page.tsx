@@ -10,14 +10,7 @@ import Video from '@/components/video';
 import WalletCard from '@/components/ui/wallet-card';
 import Icon1 from '@/assets/images/icons/icons_ethereum.svg';
 import Icon2 from '@/assets/images/icons/icons_users.svg';
-import Icon3 from '@/assets/images/icons/icons_cheaper.svg';
-import Icon4 from '@/assets/images/icons/icons_wallet.svg';
-import Icon5 from '@/assets/images/icons/icons_opensource.svg';
-import Icon6 from '@/assets/images/icons/icons_defi.svg';
-import Icon7 from '@/assets/images/icons/icons_easy-tx.svg';
 import Icon8 from '@/assets/images/icons/icons_gaming.svg';
-import Icon9 from '@/assets/images/icons/icons_gasless.svg';
-import Icon10 from '@/assets/images/icons/icons_mobile.svg';
 import Icon11 from '@/assets/images/icons/icons_nft.svg';
 import Icon12 from '@/assets/images/icons/icons_coins.svg';
 // gsap
@@ -227,7 +220,7 @@ export default function TokenPage() {
                 The RAYN token functions as the ecosystem token and helps maintain economic stability within the system. Furthermore, $RAYN tokens will be tradable on various exchanges.
               </p>
               <p className="mt-4 text-base leading-7">
-                Holders truly own them, with neither the game developers nor any other party able to confiscate them without user consent or knowledge. This essential feature is made possible by the blockchain technology employed in both the game and the project's economy.
+                Holders truly own them, with neither the game developers nor any other party able to confiscate them without user consent or knowledge. This essential feature is made possible by the blockchain technology employed in both the game and the projects economy.
               </p>
               <p className="mt-4 text-base leading-7">
                 Playing Runtz and engaging with the community on social media platforms will allow users to earn RAYN, a scarce and valuable currency whose worth increases as the platform attracts more users.

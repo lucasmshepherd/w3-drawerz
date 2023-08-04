@@ -6,31 +6,11 @@ import Image from 'next/image';
 import { useCopyToClipboard } from 'react-use';
 import { Check } from '@/components/icons/check';
 import { Copy } from '@/components/icons/copy';
-import Video from '@/components/video';
-import WalletCard from '@/components/ui/wallet-card';
-import Icon1 from '@/assets/images/icons/icons_ethereum.svg';
-import Icon2 from '@/assets/images/icons/icons_users.svg';
-import Icon3 from '@/assets/images/icons/icons_cheaper.svg';
-import Icon4 from '@/assets/images/icons/icons_wallet.svg';
-import Icon5 from '@/assets/images/icons/icons_opensource.svg';
-import Icon6 from '@/assets/images/icons/icons_defi.svg';
-import Icon7 from '@/assets/images/icons/icons_easy-tx.svg';
-import Icon8 from '@/assets/images/icons/icons_gaming.svg';
-import Icon9 from '@/assets/images/icons/icons_gasless.svg';
-import Icon10 from '@/assets/images/icons/icons_mobile.svg';
 import Icon11 from '@/assets/images/icons/icons_nft.svg';
-import Icon12 from '@/assets/images/icons/icons_coins.svg';
 import PersonsA from '@/assets/images/samurai.gif';
 import Persons from '@/assets/images/samurai.png';
-import BaseIcon from '@/assets/images/base-logo-in-blue.svg';
-import CbIcon from '@/assets/images/cb-wallet.svg';
-import Lab from '@/assets/images/scientist.jpg';
-import OpenAiIcon from '@/assets/images/openai-white.svg';
 import LogoIcon from '@/assets/images/logo-sm.png';
 import Game1 from '@/assets/images/games1.jpg';
-import Game2 from '@/assets/images/games2.jpg';
-import Game3 from '@/assets/images/games3.jpg';
-import Game4 from '@/assets/images/games4.jpg';
 import Game5 from '@/assets/images/games5.jpg';
 import '@/assets/css/home.scss';
 // gsap
@@ -171,12 +151,12 @@ export default function NFT() {
               >
                 Minting Now
               </Link>
-              <a
+{/*               <a
                 href="#down"
                 className="text-md mx-2 font-semibold leading-6 text-color1"
               >
                 Learn More
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="samuraiana relative py-16 w-full flex flex-col items-center justify-center -ml-16">
