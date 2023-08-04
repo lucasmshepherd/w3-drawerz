@@ -12,6 +12,8 @@ import Gemz7 from '@/assets/images/loot/gemcard_onyx.jpg';
 import Gemz8 from '@/assets/images/loot/gemcard_box.jpg';
 import LogoIcon from '@/assets/images/logo-sm.png';
 import useBodyClass from '@/components/use-body-class';
+import '@/assets/css/home.scss';
+import '@/assets/css/forge.scss';
 
 export default function NFT() {
   useBodyClass('forge');
@@ -186,18 +188,16 @@ export default function NFT() {
 
 
 
-<div className="carousel -mx-8 px-16 bg-color5 relative"> 
-  <span className="absolute top-6 right-6 px-3 py-2">DEMO</span>
+<div className="carousel -mx-8 px-16 bg-color2 relative"> 
+  <span className="absolute top-6 left-6 px-3 py-2 z-10 font-bold">LOOT DEMO</span>
 	<div className="carousel-item">
 		<div className="carousel-box">
 			<div className="title">Paris</div>
 			<div className="num">01</div>
-			<Image  className="pr-1 inline -m-[8px]"
+			<img  className="pr-1 inline -m-[8px]"
               src={Gemz1.src}
               alt="Gemz"
               title="Gemz"
-              width={100}
-              height={300}
        />
 		</div>
 	</div>
@@ -206,12 +206,10 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Warsaw</div>
 			<div className="num">02</div>
-			<Image  className="pr-1 inline -m-[8px]"
+			<img  className="pr-1 inline -m-[8px]"
               src={Gemz2.src}
               alt="Gemz"
               title="Gemz"
-              width={100}
-              height={300}
        />
 		</div>
 	</div>
@@ -220,12 +218,10 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Madrid</div>
 			<div className="num">03</div>
-			<Image  className="pr-1 inline -m-[8px]"
+			<img  className="pr-1 inline -m-[8px]"
               src={Gemz3.src}
               alt="Gemz"
               title="Gemz"
-              width={100}
-              height={300}
        />
 		</div>
 	</div>
@@ -234,12 +230,10 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Sydney</div>
 			<div className="num">04</div>
-			<Image  className="pr-1 inline -m-[8px]"
+			<img  className="pr-1 inline -m-[8px]"
               src={Gemz4.src}
               alt="Gemz"
               title="Gemz"
-              width={100}
-              height={300}
        />
 		</div>
 	</div>
@@ -248,12 +242,10 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Istanbul</div>
 			<div className="num">05</div>
-			<Image  className="pr-1 inline -m-[8px]"
+			<img  className="pr-1 inline -m-[8px]"
               src={Gemz5.src}
               alt="Gemz"
               title="Gemz"
-              width={100}
-              height={300}
        />
 		</div>
 	</div>
@@ -262,12 +254,10 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Prague</div>
 			<div className="num">06</div>
-			<Image  className="pr-1 inline -m-[8px]"
+			<img  className="pr-1 inline -m-[8px]"
               src={Gemz6.src}
               alt="Gemz"
               title="Gemz"
-              width={100}
-              height={300}
        />
 		</div>
 	</div>
@@ -276,12 +266,10 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Munich</div>
 			<div className="num">07</div>
-			<Image  className="pr-1 inline -m-[8px]"
+			<img  className="pr-1 inline -m-[8px]"
               src={Gemz7.src}
               alt="Gemz"
               title="Gemz"
-              width={100}
-              height={300}
        />
 		</div>
 	</div>
@@ -290,12 +278,10 @@ export default function NFT() {
 		<div className="carousel-box">
 			<div className="title">Venice</div>
 			<div className="num">08</div>
-			<Image  className="pr-1 inline -m-[8px]"
+			<img  className="pr-1 inline -m-[8px]"
               src={Gemz8.src}
               alt="Gemz"
               title="Gemz"
-              width={100}
-              height={300}
        />
 		</div>
 	</div>

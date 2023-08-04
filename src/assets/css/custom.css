@@ -84,9 +84,9 @@ body.forge .banner-main {
   background: linear-gradient(-45deg, #000, #14001d);
 }
 
-body.games .bodybg {
+/* body.games .bodybg {
   background: linear-gradient(-45deg, #000, #14001d);
-}
+} */
 
 .font-semibold {
   font-weight: 700;
