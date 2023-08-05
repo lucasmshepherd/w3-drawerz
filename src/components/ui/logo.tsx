@@ -23,12 +23,7 @@ export default function Logo() {
       className="flex w-28 outline-none sm:w-32 4xl:w-36"
     >
       <span className="relative flex overflow-hidden">
-        {isMounted && isDarkMode && (
-          <Image src={darkLogo} alt="RAYN Logo" height={42} priority />
-        )}
-        {isMounted && !isDarkMode && (
-          <Image src={lightLogo} alt="RAYN Logo" height={42} priority />
-        )}
+        <Image src={darkLogo} alt="RAYN Logo" height={42} priority />
       </span>
     </AnchorLink>
   );

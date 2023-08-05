@@ -28,7 +28,7 @@ export function MenuItems() {
           {item.dropdownItems ? (
             <div className="relative mx-4 first:ml-0 last:mr-0">
               <Menu>
-                <Menu.Button className="flex items-center text-sm font-medium text-gray-600 transition hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+                <Menu.Button className="flex items-center text-sm font-medium transition text-gray-300 hover:text-white">
                   {item.name}
                   <span className="z-[1] transition-transform duration-200 ltr:ml-3 rtl:mr-3">
                     <ChevronDown />
@@ -68,7 +68,7 @@ export function MenuItems() {
               href={{
                 pathname: item.href,
               }}
-              className="mx-3 text-[13px] font-medium text-gray-600 transition first:ml-0 last:mr-0 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white 2xl:mx-3 2xl:text-sm 3xl:mx-4"
+              className="mx-3 text-[13px] font-medium transition first:ml-0 last:mr-0 text-gray-300 hover:text-white 2xl:mx-3 2xl:text-sm 3xl:mx-4"
               activeClassName="!text-gray-900 dark:!text-color4"
             >
               {item.name}
@@ -83,7 +83,7 @@ export function MenuItems() {
 export default function DrawerMenu() {
   const { closeDrawer } = useDrawer();
   return (
-    <div className="relative w-full max-w-full bg-white dark:bg-dark xs:w-80">
+    <div className="relative w-full max-w-full bg-color2 xs:w-80">
       <div className="flex h-24 items-center justify-between overflow-hidden px-6 py-4">
         <Logo />
         <div className="md:hidden">
