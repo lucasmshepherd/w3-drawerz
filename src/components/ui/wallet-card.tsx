@@ -109,7 +109,7 @@ export default function WalletCard() {
             <li
               key={currency.code}
               id={currency.name}
-              className="grid grid-cols-[150px_repeat(2,1fr)] items-center justify-between text-sm text-gray-900 dark:text-white 2xl:grid-cols-[140px_repeat(2,1fr)] 3xl:grid-cols-[150px_repeat(2,1fr)]"
+              className="grid grid-cols-[150px_repeat(2,1fr)] items-center justify-between text-sm text-white 2xl:grid-cols-[140px_repeat(2,1fr)] 3xl:grid-cols-[150px_repeat(2,1fr)]"
             >
               <span className="disname flex items-center gap-2.5 whitespace-nowrap">
                 <b>{currency.name}</b>

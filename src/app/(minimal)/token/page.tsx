@@ -131,19 +131,19 @@ export default function TokenPage() {
       </div>
       {/* End Title */}
       <div className="mt-5 max-w-xl text-center mx-auto">
-        <p className="text-lg text-gray-600 dark:text-gray-400">
+        <p className="text-lg text-gray-300">
           Rewardz® Automated Yield Network
         </p>
       </div>
       <div className="mt-5 flex justify-center items-center gap-x-1 sm:gap-x-3">
-        <span className="text-sm font-bold text-gray-600 dark:text-gray-400 pr-2">
+        <span className="text-sm font-bold text-gray-400 pr-2">
           Fixed:  
         </span>
-        <span className="text-sm text-gray-900 dark:text-white">
+        <span className="text-sm text-white">
           100 Billion RAYN
         </span>
         <svg
-          className="h-5 w-5 text-gray-300 dark:text-gray-600"
+          className="h-5 w-5 text-gray-600"
           width={16}
           height={16}
           viewBox="0 0 16 16"
