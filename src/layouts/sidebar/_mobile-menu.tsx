@@ -69,7 +69,7 @@ export function MenuItems() {
                 pathname: item.href,
               }}
               className="mx-3 text-[13px] font-medium transition first:ml-0 last:mr-0 text-gray-300 hover:text-white 2xl:mx-3 2xl:text-sm 3xl:mx-4"
-              activeClassName="!text-gray-900 dark:!text-color4"
+              activeClassName="!text-color4"
             >
               {item.name}
             </ActiveLink>
