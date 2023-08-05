@@ -69,9 +69,9 @@ export default function Header({ className }: { className?: string }) {
   return (
     <nav
       className={cn(
-        'sticky top-0 z-30 h-16 w-full transition-all duration-300 ltr:right-0 rtl:left-0 sm:h-20 3xl:h-24',
+        'sticky top-0 z-30 h-16 w-full bg-color2 transition-all duration-300 ltr:right-0 rtl:left-0 sm:h-20 3xl:h-24',
         ((isMounted && windowScroll.y) as number) > 2
-          ? 'shadow-card backdrop-blur from-dark to-dark/80'
+          ? 'shadow-card backdrop-blur'
           : '',
         className
       )}

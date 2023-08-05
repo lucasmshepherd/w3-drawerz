@@ -58,7 +58,7 @@ function HeaderRightArea() {
       <div className="hidden lg:flex lg:items-center gap-4">
         {/* {address && <NotificationButton />}
         {address && <ProfileButton />} */}
-        <a href="https://app.rewardz.network" className="primary-button button-outline text-md whitespace-nowrap px-12 py-3 text-center">Launch App</a>
+        <a href="https://app.rewardz.network" className="primary-button button-outline text-light text-md whitespace-nowrap px-12 py-3 text-center">Launch App</a>
       </div>
 
       <div className="flex items-center lg:hidden">
@@ -125,7 +125,7 @@ export default function MinimalLayout({
     return (
       <>
         <Header />
-        <div className="main-wrapper bg-light-100 dark:bg-dark-100 flex min-h-screen flex-col gap-6 px-4 sm:px-6 lg:px-8 3xl:px-10">
+        <div className="main-wrapper flex min-h-screen flex-col gap-6 px-4 sm:px-6 lg:px-8 3xl:px-10">
           <main className="text-white main-main mx-auto mb-12 flex w-full max-w-[2160px] flex-grow flex-col">
             {children}
           </main>
