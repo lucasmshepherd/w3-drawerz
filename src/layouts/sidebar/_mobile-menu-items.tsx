@@ -1,37 +1,38 @@
 import routes from '@/config/routes';
 import { HomeIcon } from '@/components/icons/home';
-import { FarmIcon } from '@/components/icons/farm';
+import { CompassIcon } from '@/components/icons/compass';
 import { PoolIcon } from '@/components/icons/pool';
 import { ProfileIcon } from '@/components/icons/profile';
 import { DiskIcon } from '@/components/icons/disk';
 import { ExchangeIcon } from '@/components/icons/exchange';
 import { VoteIcon } from '@/components/icons/vote-icon';
 import { PlusCircle } from '@/components/icons/plus-circle';
-import { CompassIcon } from '@/components/icons/compass';
+import { PowerIcon } from '@/components/icons/power';
 import { LivePricing } from '@/components/icons/live-pricing';
+import { NormalGridIcon } from '@/components/icons/normal-grid';
 
 export const mobileMenuItems = [
   {
     name: 'Token',
-    icon: <HomeIcon />,
+    icon: <LivePricing />,
     href: '/token',
     link: '',
   },
   {
-    name: 'NFT',
-    icon: <FarmIcon />,
+    name: 'NFTs',
+    icon: <NormalGridIcon />,
     href: '/nft',
     link: '',
   },
   {
     name: 'Games',
-    icon: <FarmIcon />,
+    icon: <PowerIcon />,
     href: '/games',
     link: '',
   },
   {
-    name: 'Forge',
-    icon: <FarmIcon />,
+    name: 'Quests',
+    icon: <CompassIcon />,
     href: '/forge',
     link: '',
   },

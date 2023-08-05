@@ -400,7 +400,7 @@ export default function Home() {
       </p>
 
 
-      <div id="cardroww" className="max-w-2xl mx-auto mb-12 rounded-lg w-full">
+{/*       <div id="cardroww" className="max-w-2xl mx-auto mb-12 rounded-lg w-full">
         <div className="relative mx-auto">
           <div className="relative ">
             <Image
@@ -427,7 +427,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
       <div id="cardrow" className="max-w-2xl mx-auto mb-12 rounded-lg w-full">
@@ -461,7 +461,7 @@ export default function Home() {
 
 
       <Link
-        href="/minimal/games"
+        href="/games"
         className="primary-button button-outline text-md whitespace-nowrap px-12 py-3 text-center inline mx-auto"
       >
         View Games
