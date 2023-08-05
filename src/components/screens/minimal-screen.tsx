@@ -220,7 +220,7 @@ export default function Home() {
                 <span className="text-sm text-color4">Mainnet August 9th!</span>
               </span>
             </div>
-            <h1 className="mt-6 text-4xl font-light tracking-tight text-white sm:text-6xl">
+            <h1 className="mt-6 text-4xl tracking-tight text-white sm:text-6xl">
               Built Different
             </h1>
             <p className="mt-6 max-w-[25em] text-lg leading-8 text-gray-300">
@@ -395,7 +395,7 @@ export default function Home() {
       <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full text-center">
         Web3 Gamin<span className="hype-3">g</span>
       </h2>
-      <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full text-center mb-10">
+      <p className="mt-2 text-4xl md:text-5xl text-light tracking-tight w-full text-center mb-10">
         Gaming Development
       </p>
 
@@ -414,7 +414,7 @@ export default function Home() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   Growbotz <i className="text-xs text-white/50 inline font-normal">In Progress</i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">
@@ -444,7 +444,7 @@ export default function Home() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   High Orbit <i className="text-xs text-white/50 inline font-normal">Seeking Investors</i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">
@@ -479,7 +479,7 @@ export default function Home() {
             <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full text-center">
               Eth<span className="hype-2">e</span>r<span className="hype-3">e</span>um L2
             </h2>
-            <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full text-center mb-10">
+            <p className="mt-2 text-4xl md:text-5xl text-light tracking-tight w-full text-center mb-10">
               Building on Base
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -540,7 +540,7 @@ export default function Home() {
               <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
                 Security
               </h2>
-              <p className="mt-2 text-3xl md:text-4xl font-light tracking-tight">
+              <p className="mt-2 text-3xl md:text-4xl text-light tracking-tight">
                 Base has been meticulously designed to stand as a beacon of
                 unity
               </p>
@@ -602,7 +602,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="text-center">
-              <h2 className="text-4xl font-light tracking-tight sm:text-5xl">
+              <h2 className="text-4xl text-light tracking-tight sm:text-5xl">
                 Blockchain Gaming
               </h2>
               <p className="mt-4 text-lg leading-8">

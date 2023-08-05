@@ -136,7 +136,7 @@ export default function NFT() {
                 <span className="text-sm text-color4">Minting Now!</span>
               </span> */}
             </div>
-            <h1 className="mt-6 text-4xl font-light tracking-tight text-white sm:text-6xl">
+            <h1 className="mt-6 text-4xl text-light tracking-tight text-white sm:text-6xl">
               Attitude<br/>Unleashed
             </h1>
             <p className="mt-6 text-lg max-w-[25em] leading-8 text-gray-300">
@@ -193,7 +193,7 @@ export default function NFT() {
         <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full">
           RAYN Flow
         </h2>
-        <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full mb-10">
+        <p className="mt-2 text-4xl md:text-5xl text-light tracking-tight w-full mb-10">
           Buy & Sell Taxes
         </p>
       </div>
@@ -232,7 +232,7 @@ export default function NFT() {
       {/* End Announcement Banner */}
       {/* Title */}
       <div className="mt-5 text-center mx-auto">
-        <h1 className="block font-light text-4xl tracking-tight md:text-5xl lg:text-6xl">
+        <h1 className="block text-light text-4xl tracking-tight md:text-5xl lg:text-6xl">
           Runtz NFT Community
         </h1>
       </div>
@@ -286,7 +286,7 @@ export default function NFT() {
   <h2 className="hype-1 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full text-center">
         Web3 Gamin<span className="hype-3">g</span>
       </h2>
-      <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full text-center mb-10">
+      <p className="mt-2 text-4xl md:text-5xl text-light tracking-tight w-full text-center mb-10">
         Gaming Development
       </p>
 
@@ -305,7 +305,7 @@ export default function NFT() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   Growbotz <i className="text-xs text-white/50 inline font-normal">In Progress</i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">
@@ -335,7 +335,7 @@ export default function NFT() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   High Orbit <i className="text-xs text-white/50 inline font-normal">Seeking Investors</i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">

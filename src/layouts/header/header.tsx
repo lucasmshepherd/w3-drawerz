@@ -71,7 +71,7 @@ export default function Header({ className }: { className?: string }) {
       className={cn(
         'sticky top-0 z-30 h-16 w-full transition-all duration-300 ltr:right-0 rtl:left-0 sm:h-20 3xl:h-24',
         ((isMounted && windowScroll.y) as number) > 2
-          ? 'bg-gradient-to-b from-white to-white/80 shadow-card backdrop-blur dark:from-dark dark:to-dark/80'
+          ? 'shadow-card backdrop-blur from-dark to-dark/80'
           : '',
         className
       )}

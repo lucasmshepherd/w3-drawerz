@@ -138,7 +138,7 @@ export default function NFT() {
                 <span className="text-sm text-color4">Minting Now!</span>
               </span> */}
             </div>
-            <h1 className="mt-6 text-4xl font-light tracking-tight text-white sm:text-6xl">
+            <h1 className="mt-6 text-4xl tracking-tight text-light sm:text-6xl">
               Daily Quests
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">

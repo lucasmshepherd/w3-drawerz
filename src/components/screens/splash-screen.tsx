@@ -30,7 +30,7 @@ useBodyClass('welcome');
 	</div>
 
 	<div className="splashtitle">
-		<div className="text-md tracking-tight font-light p-8 md:basis-3/4 text-center md:text-left">
+		<div className="text-md tracking-tight text-light p-8 md:basis-3/4 text-center md:text-left">
 			The Rewardz® Network uses cookies to track basic analytical data in order to maintain an optimized browsing experience for users
 			<hr className="my-2 opacity-20"/>
 			The media, content and links on this site should not be considered financial advice, always do proper research before investing

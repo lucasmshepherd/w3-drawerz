@@ -76,7 +76,7 @@ export default function Games() {
       <h2 className="hype-1 mt-24 text-[2em] md:text-[3em] font-semibold leading-7 text-color4 w-full text-center">
         play-to-earn
       </h2>
-      <p className="mt-2 text-4xl md:text-5xl font-light tracking-tight w-full text-center">
+      <p className="mt-2 text-4xl md:text-5xl text-light tracking-tight w-full text-center">
         Game Development
       </p>
       <p className="text-center text-sm mb-12 mt-2 italic text-white/70">*All development details are subject to change</p>
@@ -95,7 +95,7 @@ export default function Games() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   High Orbit <i className="text-xs text-white/50 inline font-normal">Seeking Investors</i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">
@@ -124,7 +124,7 @@ export default function Games() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   Growbotz <i className="text-xs text-white/50 inline font-normal">In Progress</i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">
@@ -153,7 +153,7 @@ export default function Games() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   Gemz <i className="text-xs text-white/50 inline font-normal">Not Started</i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">
@@ -182,7 +182,7 @@ export default function Games() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   Hashishin <i className="text-xs text-white/50 inline font-normal"></i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">
@@ -211,7 +211,7 @@ export default function Games() {
           <div className="cardnote mx-auto max-w-4xl rounded-md bg-color6/90 absolute top-6 left-6 shadow-md">
             <div className="px-3 py-2 flex flex-row space-x-6 justify-start items-center">
               <div className="">
-                <h2 className="text-xl md:text-xl font-light tracking-tight w-full mb-0 font-semibold text-light">
+                <h2 className="text-xl md:text-xl text-light tracking-tight w-full mb-0 font-semibold text-light">
                   After Party <i className="text-xs text-white/50 inline font-normal"></i>
                 </h2>
                 <p className="text-sm leading-7 text-gray-300">
