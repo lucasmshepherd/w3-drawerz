@@ -238,7 +238,7 @@ export default function NFT() {
       </div>
       {/* End Title */}
       <div className="mt-5 max-w-xl text-center mx-auto">
-        <p className="text-lg text-gray-600 dark:text-gray-400">
+        <p className="text-lg text-gray-400">
           Partnered with The Rewardz® Network
         </p>
       </div>
