@@ -10,8 +10,8 @@ export default function Video() {
 {/*       <Image className={styles.logo} src={Logo.src} width={60} height={70} alt="RAYN Dropz Logo" /> */}
       <div className={styles.video}>
         <video autoPlay loop muted>  
-          <source src="https://rewardz.network/videos/rain_2.mp4" type="video/mp4" />
-          <source src="https://rewardz.network/videos/rain_2.webm" type="video/webm" />
+          <source src="/assets/videos/rain_2.mp4" type="video/mp4" />
+          <source src="/assets/videos/rain_2.webm" type="video/webm" />
         </video>
       </div>
     </>

@@ -291,7 +291,6 @@ export default function Home() {
               <video autoPlay loop muted className="mix-blend-screen md:-my-32 md:max-h-[500px] lg:max-h-[none]">  
                 <source src="/assets/videos/forged_1.mp4" type="video/mp4" />
                 <source src="/assets/videos/forged_1.webm" type="video/webm" />
-                <source src="/assets/videos/forged_1.webm" type="video/webm" />
 {/*                 <source src="https://rewardz.network/videos/rain_2.webm" type="video/webm" /> */}
               </video>
             </div>
