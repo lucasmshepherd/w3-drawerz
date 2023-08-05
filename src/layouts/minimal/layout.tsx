@@ -84,8 +84,8 @@ export function Header() {
       className={cn(
         'sticky top-0 z-30 flex w-full items-center justify-between px-4 transition-all duration-300 ltr:right-0 rtl:left-0 sm:px-6 lg:px-8 3xl:px-10',
         isMounted && windowScroll.y > 10
-          ? 'h-16 shadow-card backdrop-blur sm:h-20'
-          : 'h-16 sm:h-24'
+          ? 'h-16 bg-gradient-to-b from-color2 to-color2/80 shadow-card backdrop-blur sm:h-20'
+          : 'h-16 bg-color2 sm:h-24'
       )}
     >
       <div className="mx-auto flex w-full max-w-[2160px] items-center justify-between">
