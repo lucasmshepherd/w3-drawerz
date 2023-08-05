@@ -67,7 +67,7 @@ function HeaderRightArea() {
           isOpen={isOpen}
           onClick={() => openDrawer('MOBILE_MENU')}
           color="white"
-          className="shadow-main ltr:ml-3.5 rtl:mr-3.5 dark:border dark:border-solid dark:border-gray-700 dark:bg-light-dark dark:text-white ltr:sm:ml-5 rtl:sm:mr-5"
+          className="shadow-main ltr:ml-3.5 rtl:mr-3.5 border border-solid border-gray-700 bg-light-dark text-white ltr:sm:ml-5 rtl:sm:mr-5"
         />
       </div>
     </div>
@@ -95,7 +95,7 @@ export function Header() {
               isOpen={isOpen}
               onClick={() => openDrawer('MOBILE_MENU')}
               color="white"
-              className="shadow-main dark:border dark:border-solid dark:border-gray-700 dark:bg-light-dark dark:text-white"
+              className="shadow-main border border-solid border-gray-700 bg-light-dark text-white"
             />
           </div>
           <Logo />
